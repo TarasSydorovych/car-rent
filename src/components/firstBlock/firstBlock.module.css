@@ -1,6 +1,7 @@
 :root {
 	--standart-color: #27ba7a;
 	--secondary-color: #6c757d;
+	--custom-font: 'Montserrat', sans-serif;
 }
 .headerWrap {
 	width: auto;
@@ -34,10 +35,11 @@
 	margin-right: 20px;
 }
 .headerFirstH4 {
-	font-family: 'Work Sans', sans-serif;
+	font-family: var(--custom-font);
 	color: white;
 	font-size: 15px;
 	text-decoration: none;
+	font-weight: bolder;
 }
 .lacationIconSt {
 	color: white;
@@ -127,8 +129,9 @@
 	color: white;
 	cursor: pointer;
 	text-decoration: none;
-	font-family: 'Work Sans', sans-serif;
+	font-family: var(--custom-font);
 	font-size: 20px;
+	font-weight: bolder;
 }
 .listLi:hover {
 	color: var(--standart-color);
@@ -144,4 +147,88 @@
 	color: var(--standart-color);
 	font-size: 40px;
 	font-weight: bolder;
+}
+.blockWithAutoWrap {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.topH1InFirst {
+	font-family: 'Work Sans', Arial, Tahoma;
+	font-size: 70px;
+	align-self: flex-start;
+
+	color: #1a2126;
+	margin-bottom: 0;
+	text-shadow:
+		2px 0 0 #27ba7a,
+		-2px 0 0 #27ba7a,
+		0 2px 0 #27ba7a,
+		0 -2px 0 #27ba7a,
+		1px 1px #27ba7a,
+		-1px -1px 0 #27ba7a,
+		1px -1px 0 #27ba7a,
+		-1px 1px 0 #27ba7a;
+}
+.topH1InFirstSecond {
+	font-family: 'Work Sans', Arial, Tahoma;
+	color: white;
+	font-size: 50px;
+	margin-bottom: 0;
+}
+.hWrap {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	height: 70%;
+	width: 70%;
+}
+.wrapPIn {
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.firstPWrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.styleP {
+	font-family: 'Work Sans', Arial, Tahoma;
+	color: white;
+	font-size: 30px;
+}
+.titleButton {
+	position: relative;
+	width: 300px;
+	height: 50px;
+	background: none;
+	border: 0;
+	color: white;
+	font-size: 25px;
+	font-family: 'Work Sans', Arial, Tahoma;
+	cursor: pointer;
+	margin-top: 20px;
+}
+.titleButton::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 35%;
+	height: 100%;
+	background: var(--standart-color);
+	z-index: -1;
+	color: white;
+	font-size: 25px;
+	font-family: 'Jost', sans-serif;
+}
+.titleButton:hover::before {
+	width: 100%;
+	transition: all 0.5s ease-in-out;
 }
