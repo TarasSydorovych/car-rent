@@ -1,0 +1,74 @@
+:root {
+	--standart-color: #27ba7a;
+	--secondary-color: #6c757d;
+	--custom-font: 'Montserrat', sans-serif;
+	--customtwo-font: 'Work Sans', Arial, Tahoma;
+}
+.aboutUsWrap {
+	width: calc(100% - 60px);
+	height: auto;
+	padding: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.aboutUsSmallWrap {
+	width: 80%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.aboutUsH3 {
+	font-size: var(--custom-font);
+	color: var(--standart-color);
+	font-size: 35px;
+	margin-bottom: 0;
+}
+.aboutUsP {
+	width: 57%;
+	font-size: var(--custom-font);
+	color: black;
+	font-size: 20px;
+	text-align: center;
+}
+.picAndTextWr {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	height: auto;
+	width: auto;
+}
+.abouttPic {
+	border-radius: 10px;
+}
+.wrapPIn {
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 40px;
+}
+.firstPWrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.styleP {
+	font-family: 'Work Sans', Arial, Tahoma;
+	color: black;
+	font-size: 25px;
+}
+.buttonDetail {
+	border: none;
+	border-radius: 8px;
+	width: 200px;
+	height: 40px;
+	font-family: var(--custom-font);
+	color: black;
+	font-weight: bolder;
+	font-size: 15px;
+	background: var(--standart-color);
+	cursor: pointer;
+}

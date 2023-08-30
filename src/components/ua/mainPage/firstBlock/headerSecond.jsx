@@ -35,8 +35,12 @@ export default function HeaderSecond() {
 
 						<li className={css.listLi}>Контакти</li>
 					</ul>
+					<div className={css.languageWrapP}>
+						<p className={css.languageP}>UA</p>
+						<p className={css.languageP}>EN</p>
+					</div>
 					<h2 className={css.logo}>
-						CAR-<span className={css.logoSpan}>Rent</span>
+						Car<span className={css.logoSpan}>Rent</span>Ukraine
 					</h2>
 				</div>
 			</div>

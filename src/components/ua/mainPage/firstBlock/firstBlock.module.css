@@ -88,13 +88,17 @@
 
 /* Стилі для секції героя та контенту */
 .hero {
-	background-image: url('../../img/slide1.webp');
+	background-image: url('../../../../img/slide1.webp');
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	top: 50px;
+}
+.blockPidPic {
+	height: 100vh;
+	width: 100%;
 }
 
 .content {
@@ -137,13 +141,13 @@
 	color: var(--standart-color);
 }
 .logo {
-	font-family: 'Shrikhand', cursive;
+	font-family: 'Permanent Marker', cursive;
 	color: white;
 	font-size: 40px;
 	font-weight: bolder;
 }
 .logoSpan {
-	font-family: 'Shrikhand', cursive;
+	font-family: 'Permanent Marker', cursive;
 	color: var(--standart-color);
 	font-size: 40px;
 	font-weight: bolder;
@@ -213,6 +217,7 @@
 	font-size: 25px;
 	font-family: 'Work Sans', Arial, Tahoma;
 	cursor: pointer;
+	z-index: 10;
 	margin-top: 20px;
 }
 .titleButton::before {
@@ -231,4 +236,20 @@
 .titleButton:hover::before {
 	width: 100%;
 	transition: all 0.5s ease-in-out;
+}
+.languageWrapP {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.languageP {
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: var(--custom-font);
+	font-size: 20px;
+	font-weight: bolder;
+	cursor: pointer;
+	text-decoration: none;
+	margin-left: 10px;
 }

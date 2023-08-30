@@ -1,0 +1,96 @@
+:root {
+	--standart-color: #27ba7a;
+	--secondary-color: #6c757d;
+	--custom-font: 'Montserrat', sans-serif;
+	--customtwo-font: 'Work Sans', Arial, Tahoma;
+}
+.secondBlockWrap {
+	width: 100%;
+	height: auto;
+	display: flex;
+	margin-top: 20px;
+	align-items: center;
+	justify-content: center;
+}
+.secondBlockWrapDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 80%;
+	height: auto;
+}
+.clasAutoHWrap {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid var(--standart-color);
+}
+.clasAutoH {
+	font-family: var(--custom-font);
+	font-size: 35px;
+	color: black;
+	margin-bottom: 0;
+}
+.autoWrapSection {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.blockAutoWrap {
+	width: 400px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 5px;
+	overflow: hidden;
+	transition: background-color 0.8s ease; /* Плавна зміна кольору фону */
+	background-color: white; /* Початковий колір фону */
+	cursor: pointer;
+}
+
+.blockAutoWrap:hover {
+	background-color: #f5f5f5; /* Колір фону при наведенні */
+}
+.blockAutoWrap:hover .categoryBlockImg {
+	width: 180%;
+}
+.blockAutoWrap:hover .categoryName {
+	margin-left: 10px;
+}
+.blockAutoWrap:hover .categoryPrice {
+	margin-left: 10px;
+}
+.blockAutoWrapText {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+.categoryName {
+	font-family: var(--custom-font);
+	font-size: 25px;
+	color: black;
+	font-weight: bolder;
+	transition: margin-left 0.8s ease;
+}
+.categoryPrice {
+	font-family: var(--custom-font);
+	font-size: 20px;
+	color: var(--standart-color);
+	font-weight: bold;
+	transition: margin-left 0.8s ease;
+}
+.categoryBlockImg {
+	width: 150%;
+	height: 100%;
+	transition: width 0.8s ease;
+}

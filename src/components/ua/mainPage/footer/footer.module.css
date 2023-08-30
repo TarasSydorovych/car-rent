@@ -1,0 +1,11 @@
+:root {
+	--standart-color: #27ba7a;
+	--secondary-color: #6c757d;
+	--custom-font: 'Montserrat', sans-serif;
+}
+.mainFooter {
+	width: calc(100%);
+	height: auto;
+	padding: 140px 0;
+	background: #181e24;
+}
