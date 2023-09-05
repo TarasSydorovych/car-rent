@@ -1,0 +1,89 @@
+:root {
+	--standart-color: #27ba7a;
+	--secondary-color: #6c757d;
+	--custom-font: 'Montserrat', sans-serif;
+	--customtwo-font: 'Work Sans', Arial, Tahoma;
+}
+.contactLabelWrap {
+	width: 100%;
+	height: 384px;
+	background: url(../../../img/aboutTitle.jpeg) no-repeat #fff;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contactUsH1Top {
+	color: white;
+	font-weight: bolder;
+	font-size: 40px;
+}
+.blockShortDescWrap {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 100px;
+}
+.blockDescTextWr {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 30%;
+}
+.descTextH1 {
+	font-family: var(--custom-font);
+	font-weight: bolder;
+	font-size: 40px;
+	color: black;
+	margin-bottom: 0;
+}
+.descTextP {
+	font-family: var(--custom-font);
+	font-weight: bolder;
+	font-size: 20px;
+	color: black;
+}
+.blockDescPicWr {
+	width: 532px;
+	height: 483px;
+	background: url(../../../img/forAb.jpeg);
+	background-position: center;
+	border-radius: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.listQuoWrap {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 140px;
+	margin-bottom: 150px;
+}
+.oneOfListWrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 500px;
+}
+.iconCupSt {
+	font-size: 50px;
+	color: var(--standart-color);
+}
+.forIcH4 {
+	font-weight: bolder;
+	font-size: 30px;
+	color: black;
+	margin-bottom: 0;
+}
+.forIcP {
+	font-family: var(--custom-font);
+	font-weight: bolder;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+	width: 350px;
+}

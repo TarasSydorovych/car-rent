@@ -1,0 +1,77 @@
+:root {
+	--standart-color: #27ba7a;
+	--secondary-color: #6c757d;
+	--custom-font: 'Montserrat', sans-serif;
+	--customtwo-font: 'Work Sans', Arial, Tahoma;
+}
+.contactLabelWrap {
+	width: 100%;
+	height: 384px;
+	background: url(../../../img//new.jpeg) no-repeat #fff;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contactUsH1Top {
+	color: white;
+	font-weight: bolder;
+	font-size: 40px;
+}
+.sectionWrap {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+.categoryListWrap {
+	width: 80%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.ulListCategory {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	list-style-type: none;
+}
+.ulListLi {
+	font-family: var(--custom-font);
+	font-size: 30px;
+	font-weight: bolder;
+	cursor: pointer;
+}
+.ulListLi:hover {
+	color: var(--standart-color);
+}
+.prodListWrap {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+.prodWrap {
+	width: 341px;
+	height: 511px;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 15px;
+	box-shadow: 0px 0px 7px rgb(226, 226, 226);
+}
+.prodPic {
+	width: 272px;
+	height: 160px;
+}

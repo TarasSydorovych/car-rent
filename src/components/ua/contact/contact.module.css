@@ -1,0 +1,185 @@
+:root {
+	--standart-color: #27ba7a;
+	--secondary-color: #6c757d;
+	--custom-font: 'Montserrat', sans-serif;
+	--customtwo-font: 'Work Sans', Arial, Tahoma;
+}
+.contactLabelWrap {
+	width: 100%;
+	height: 384px;
+	background: url(../../../img/contactbaner.jpeg) no-repeat #fff;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contactUsH1Top {
+	color: white;
+	font-weight: bolder;
+	font-size: 40px;
+}
+.connectFormAllWrap {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-top: 140px;
+}
+.blockWithPicS {
+	background: url(../../../img/picToCon.jpeg);
+	background-position: center;
+	border-radius: 0 10px 10px 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 45%;
+	height: 769px;
+}
+.formSContact {
+	width: 50%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.contactUsH2 {
+	font-family: 'Work Sans', Arial, Tahoma;
+	font-weight: bold;
+	font-size: 40px;
+	color: black;
+	margin-top: 60px;
+}
+.contactFormik {
+	width: 80%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	height: auto;
+}
+.formicInputs {
+	width: 100%;
+	height: 60px;
+	padding: 0.375rem 0.75rem;
+	font-weight: 400;
+	line-height: 1.5;
+	font-size: 18px;
+	color: #212529;
+	border-radius: 0.25rem;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	margin-top: 30px;
+	transition:
+		border-color 0.15s ease-in-out,
+		box-shadow 0.15s ease-in-out;
+}
+.formicArea {
+	width: 100%;
+	height: 160px;
+	padding: 0.375rem 0.75rem;
+	font-weight: 400;
+	line-height: 1.5;
+	font-size: 18px;
+	color: #212529;
+	border-radius: 0.25rem;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	margin-top: 30px;
+	transition:
+		border-color 0.15s ease-in-out,
+		box-shadow 0.15s ease-in-out;
+}
+.buttonFormicSend {
+	width: 250px;
+	height: 53px;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	background-color: var(--standart-color);
+	font-family: var(--custom-font);
+	font-weight: bolder;
+	font-size: 16px;
+	margin-top: 20px;
+}
+.wrapMapAdnLocal {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+.mapH5 {
+	font-family: var(--custom-font);
+	color: var(--standart-color);
+	font-size: 15px;
+	font-weight: bold;
+}
+.ourContactInf {
+	font-family: var(--custom-font);
+	color: black;
+	font-size: 40px;
+	font-weight: bolder;
+	margin-top: 0;
+}
+.wrapMapInf {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.wrapSmSm {
+	width: 50%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.wrapInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 50%;
+}
+.informWrapText {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-top: 20px;
+}
+.iconFirst {
+	font-size: 50px;
+	font-family: var(--custom-font);
+	color: var(--standart-color);
+}
+.informWrapTextSm {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 20px;
+}
+.titleAdr {
+	font-family: var(--custom-font);
+	font-size: 30px;
+	color: black;
+	font-weight: bolder;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.titleP {
+	font-family: var(--custom-font);
+	font-size: 20px;
+	color: rgb(95, 95, 95);
+	font-weight: bolder;
+}
+.pictureFon {
+	background: url(../../../img/maps.jpeg);
+	background-position: center;
+	border-radius: 10px 0 0 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 50%;
+	height: 500px;
+}
