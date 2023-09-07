@@ -7,6 +7,7 @@ import Contact from './components/ua/contact/contact';
 import AboutUs from './components/ua/aboutUs/aboutUs';
 import Services from './components/ua/services/services';
 import Category from './components/ua/category/category';
+import AdmUkr from './components/adm/admUkr/admUkr';
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				<Route path='/about' element={<AboutUs />} />
 				<Route path='/services' element={<Services />} />
 				<Route path='/category' element={<Category />} />
+				<Route path='/adm' element={<AdmUkr />} />
 			</Routes>
 		</div>
 	);

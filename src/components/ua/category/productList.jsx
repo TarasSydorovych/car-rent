@@ -1,9 +1,15 @@
+import withFirebaseCollection from '../../HOK/withFirebaseCollection';
 import css from './category.module.css';
 import ProductInCat from './productInCat';
-export default function ProductList() {
+const ProductList = ({ data, setSendMessage }) => {
 	return (
 		<section className={css.prodListWrap}>
-			<ProductInCat />
+			{data.map((el, index) => {
+				return (
+					<ProductInCat setSendMessage={setSendMessage} key={index} el={el} />
+				);
+			})}
 		</section>
 	);
-}
+};
+export default withFirebaseCollection('product')(ProductList);

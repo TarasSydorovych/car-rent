@@ -1,8 +1,11 @@
 import withFirebaseCollection from '../../HOK/withFirebaseCollection';
 import css from './category.module.css';
-const CategoryList = ({ dataCat, data, setCategory }) => {
+const CategoryList = ({ dataCat, data, setCategory, setPidCategory }) => {
 	const changeCategory = (name) => {
 		setCategory(name);
+	};
+	const changePidCategory = (name) => {
+		setPidCategory(name);
 	};
 	return (
 		<section className={css.sectionWrap}>
@@ -11,7 +14,7 @@ const CategoryList = ({ dataCat, data, setCategory }) => {
 					{dataCat.map((el, index) => {
 						return (
 							<li
-								onClick={() => changeCategory(el.category)}
+								onClick={() => changeCategory(el.class)}
 								key={index}
 								className={css.ulListLi}
 							>
@@ -22,7 +25,7 @@ const CategoryList = ({ dataCat, data, setCategory }) => {
 					{data.map((el, index) => {
 						return (
 							<li
-								onClick={() => changeCategory(el.category)}
+								onClick={() => changePidCategory(el.class)}
 								key={index}
 								className={css.ulListLi}
 							>
