@@ -56,6 +56,10 @@ export default function AdmUkr() {
 			name: 'фото',
 			transliter: 'bookFoto',
 		},
+		{
+			name: 'Застава',
+			transliter: 'rentPay',
+		},
 	];
 
 	const [photoInputs, setPhotoInputs] = useState([1]);

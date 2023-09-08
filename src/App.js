@@ -8,6 +8,7 @@ import AboutUs from './components/ua/aboutUs/aboutUs';
 import Services from './components/ua/services/services';
 import Category from './components/ua/category/category';
 import AdmUkr from './components/adm/admUkr/admUkr';
+import Auto from './components/ua/auto/auto';
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<Route path='/services' element={<Services />} />
 				<Route path='/category' element={<Category />} />
 				<Route path='/adm' element={<AdmUkr />} />
+				<Route path='/auto/:id' element={<Auto />} />
 			</Routes>
 		</div>
 	);

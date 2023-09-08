@@ -77,6 +77,8 @@
 }
 .carName {
 	margin-bottom: 0;
+	color: black;
+	text-decoration: none;
 }
 .smallDesc {
 	margin-top: 0;

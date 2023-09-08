@@ -1,14 +1,24 @@
 import css from './category.module.css';
 import foto from '../../../img/toyota.jpeg';
+import { useEffect } from 'react';
+import { useParams, useLocation, Link } from 'react-router-dom';
 export default function ProductInCat({ el, setSendMessage }) {
+	const location = useLocation();
 	const openFrom = () => {
 		setSendMessage(true);
 	};
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location]);
 	return (
 		<div className={css.prodWrap}>
-			<h1 className={css.carName}>{el.autoName}</h1>
+			<Link className={css.carName} to={`/auto/${el.uid}`}>
+				<h1 className={css.carName}>{el.autoName}</h1>
+			</Link>
 			<p className={css.smallDesc}>{el.manual}</p>
-			<img src={el.imageList[0]} className={css.prodPic} />
+			<Link to={`/auto/${el.uid}`}>
+				<img src={el.imageList[0]} className={css.prodPic} />
+			</Link>
 			<ul className={css.priceList}>
 				<li className={css.priceListLi}>
 					<p className={css.listP}>{el.firstPrice}грн</p>
