@@ -22,7 +22,7 @@ export default function Footer() {
 				</ul>
 			</div>
 			<div className={css.footerLine}></div>
-			<h6 className={css.webDev}>
+			<p className={css.webDev}>
 				<a
 					href='https://webui-studio.com/'
 					target='_blanck'
@@ -30,7 +30,7 @@ export default function Footer() {
 				>
 					Розробка та підтримка WebUi
 				</a>
-			</h6>
+			</p>
 		</footer>
 	);
 }

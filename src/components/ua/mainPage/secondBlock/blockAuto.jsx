@@ -19,7 +19,11 @@ export default function BlockAuto({ el }) {
 					<div className={css.categoryPrice}>Від&nbsp;{fullPrice}грн</div>
 				</div>
 				<div className={css.blockAutoWrapPic}>
-					<img src={el.img} className={css.categoryBlockImg} />
+					<img
+						src={el.img}
+						className={css.categoryBlockImg}
+						alt={`Оренда авто ${el.class} у Львів`}
+					/>
 				</div>
 			</div>
 		</Link>

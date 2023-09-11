@@ -14,7 +14,11 @@ export default function AboutUs() {
 					наданих послуг.
 				</p>
 				<div className={css.picAndTextWr}>
-					<img src={img1} className={css.abouttPic} />
+					<img
+						src={img1}
+						className={css.abouttPic}
+						alt='Про компанію CarRentUkraine'
+					/>
 					<div className={css.wrapPIn}>
 						<div className={css.firstPWrap}>
 							<IoMdCheckmarkCircleOutline className={css.styleP} />

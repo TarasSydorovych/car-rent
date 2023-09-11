@@ -36,13 +36,13 @@
 }
 .headerFirstH4 {
 	font-family: var(--custom-font);
-	color: white;
+	color: black;
 	font-size: 15px;
 	text-decoration: none;
 	font-weight: bolder;
 }
 .lacationIconSt {
-	color: white;
+	color: black;
 	font-size: 25px;
 	margin-right: 5px;
 }
@@ -52,7 +52,7 @@
 	justify-content: space-between;
 }
 .headerFirstPLink {
-	color: white;
+	color: black;
 	font-size: 15px;
 	text-decoration: none;
 	margin-left: 15px;

@@ -27,21 +27,31 @@ export default function HeaderSecond() {
 			<div className={css.seconHeaderWr}>
 				<div className={css.seconHeaderWrFl}>
 					<ul className={css.listStyle}>
-						<Link className={css.listLi} to='/'>
-							<li className={css.listLi}>Головна</li>
-						</Link>
-						<Link className={css.listLi} to='/category'>
-							<li className={css.listLi}>Автопарк</li>
-						</Link>
-						<Link className={css.listLi} to='/services'>
-							<li className={css.listLi}>Послуги</li>
-						</Link>
-						<Link className={css.listLi} to='/about'>
-							<li className={css.listLi}>Про нас</li>
-						</Link>
-						<Link className={css.listLi} to='/contact'>
-							<li className={css.listLi}>Контакти</li>
-						</Link>
+						<li className={css.listLi}>
+							<Link className={css.listLi} to='/'>
+								Головна
+							</Link>
+						</li>
+						<li className={css.listLi}>
+							<Link className={css.listLi} to='/category'>
+								Автопарк
+							</Link>
+						</li>
+						<li className={css.listLi}>
+							<Link className={css.listLi} to='/services'>
+								Послуги
+							</Link>
+						</li>
+						<li className={css.listLi}>
+							<Link className={css.listLi} to='/about'>
+								Про нас
+							</Link>
+						</li>
+						<li className={css.listLi}>
+							<Link className={css.listLi} to='/contact'>
+								Контакти
+							</Link>
+						</li>
 					</ul>
 					<div className={css.languageWrapP}>
 						<p className={css.languageP}>UA</p>
