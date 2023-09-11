@@ -8,14 +8,14 @@ export default function HeaderFirst() {
 			<div className={css.headerFirstWrapDiv}>
 				<div className={css.locationWrap}>
 					<div className={css.locationWrapIcon}>
-						<Link className={css.locationWrapIcon}>
+						<Link to='/contact' className={css.locationWrapIcon}>
 							<IoIosPin className={css.lacationIconSt} />
 
 							<p className={css.headerFirstH4}>Наша локація</p>
 						</Link>
 					</div>
 					<div className={css.locationWrapIcon}>
-						<Link className={css.locationWrapIcon}>
+						<Link to='/contact' className={css.locationWrapIcon}>
 							<IoIosCar className={css.lacationIconSt} />
 
 							<p className={css.headerFirstH4}>Замовити авто</p>
@@ -27,10 +27,14 @@ export default function HeaderFirst() {
 				</p>
 				<div className={css.contactWrap}>
 					<p className={css.headerFirstH4}>
-						<Link className={css.headerFirstH4}>КОНТАКТИ</Link>
+						<Link to='/contact' className={css.headerFirstH4}>
+							КОНТАКТИ
+						</Link>
 					</p>
 
-					<Link className={css.headerFirstPLink}>+380939393921</Link>
+					<a href='tel:+380939393921' className={css.headerFirstPLink}>
+						+380939393921
+					</a>
 				</div>
 			</div>
 		</div>

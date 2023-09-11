@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import css from './firstBlock.module.css';
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 
@@ -22,7 +23,9 @@ export default function BlockPic() {
 							<p className={css.styleP}>Широкий вибір авто</p>
 						</div>
 					</div>
-					<button className={css.titleButton}>Обрати автомобіль</button>
+					<Link to='/category' className={css.titleButton}>
+						Обрати автомобіль
+					</Link>
 				</div>
 				<div></div>
 			</div>

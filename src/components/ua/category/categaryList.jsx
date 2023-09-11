@@ -3,9 +3,11 @@ import css from './category.module.css';
 const CategoryList = ({ dataCat, data, setCategory, setPidCategory }) => {
 	const changeCategory = (name) => {
 		setCategory(name);
+		setPidCategory('');
 	};
 	const changePidCategory = (name) => {
 		setPidCategory(name);
+		setCategory('');
 	};
 	return (
 		<section className={css.sectionWrap}>

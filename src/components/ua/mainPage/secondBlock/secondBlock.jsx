@@ -3,9 +3,8 @@ import BlockAuto from './blockAuto';
 import css from './secondBlock.module.css';
 
 const SecondBlock = ({ data }) => {
-	console.log(data);
 	return (
-		<section className={css.secondBlockWrap}>
+		<section id='catalogAuto' className={css.secondBlockWrap}>
 			<div className={css.secondBlockWrapDiv}>
 				<div className={css.clasAutoHWrap}>
 					<h3 className={css.clasAutoH}>Клас авто</h3>

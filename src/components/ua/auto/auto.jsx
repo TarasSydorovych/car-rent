@@ -11,13 +11,32 @@ const Auto = ({ data }) => {
 	const [oneProd, setOneProd] = useState();
 	const [haveProd, setHaveProd] = useState(false);
 	const [sendMessage, setSendMessage] = useState(false);
+	const [firstPrice, setFirstPrice] = useState();
+	const [secondPrice, setSecondPrice] = useState();
+	const [threePrice, setThreePrice] = useState();
+	const [fourPrice, setFourPrice] = useState();
+	const [rentPay, setRentPay] = useState();
 	let params = useParams();
 	useEffect(() => {
 		let isMounted = true;
 		for (let i = 0; i < data.length; i++) {
 			if (data[i].uid === params.id) {
 				setOneProd(data[i]);
-
+				const numberOne = parseFloat(data[i].firstPrice) * 40;
+				const numberTwo = parseFloat(data[i].secondPrice) * 40;
+				const numberThree = parseFloat(data[i].threePrice) * 40;
+				const numberFour = parseFloat(data[i].fourPrice) * 40;
+				const numberRent = parseFloat(data[i].rentPay) * 40;
+				const roundedNumberOne = Math.round(numberOne);
+				const roundedNumberTwo = Math.round(numberTwo);
+				const roundedNumberThree = Math.round(numberThree);
+				const roundedNumberFour = Math.round(numberFour);
+				const roundedNumberRent = Math.round(numberRent);
+				setFirstPrice(roundedNumberOne);
+				setSecondPrice(roundedNumberTwo);
+				setThreePrice(roundedNumberThree);
+				setFourPrice(roundedNumberFour);
+				setRentPay(roundedNumberRent);
 				setHaveProd(true);
 			}
 		}
@@ -25,6 +44,7 @@ const Auto = ({ data }) => {
 	const openMessage = () => {
 		setSendMessage(true);
 	};
+
 	return (
 		<>
 			<HeaderAll />
@@ -38,27 +58,25 @@ const Auto = ({ data }) => {
 							<h1 className={css.titleAutoH1}>
 								Оренда&nbsp;{oneProd.autoName}&nbsp; у Львові
 							</h1>
-							<p className={css.rentZa}>
-								Вартість застави&nbsp; {oneProd.rentPay}грн
-							</p>
+							<p className={css.rentZa}>Вартість застави&nbsp; {rentPay}грн</p>
 							<p className={css.rentManual}>
 								Тип трансмісії&nbsp; {oneProd.manual}
 							</p>
 							<div className={css.priceInProdWrap}>
 								<div className={css.smallWrapPrice}>
-									<p className={css.price}>{oneProd.firstPrice}грн</p>
+									<p className={css.price}>{firstPrice}грн</p>
 									<p className={css.data}>1-2діб</p>
 								</div>
 								<div className={css.smallWrapPriceSec}>
-									<p className={css.price}>{oneProd.secondPrice}грн</p>
+									<p className={css.price}>{secondPrice}грн</p>
 									<p className={css.data}>3-7діб</p>
 								</div>
 								<div className={css.smallWrapPrice}>
-									<p className={css.price}>{oneProd.threePrice}грн</p>
+									<p className={css.price}>{threePrice}грн</p>
 									<p className={css.data}>8+діб</p>
 								</div>
 								<div className={css.smallWrapPriceSec}>
-									<p className={css.price}>{oneProd.fourPrice}грн</p>
+									<p className={css.price}>{fourPrice}грн</p>
 									<p className={css.data}>30+діб</p>
 								</div>
 							</div>

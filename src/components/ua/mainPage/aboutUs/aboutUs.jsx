@@ -1,6 +1,7 @@
 import css from './aboutUs.module.css';
 import img1 from '../../../../img/auto1.jpeg';
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 export default function AboutUs() {
 	return (
 		<div className={css.aboutUsWrap}>
@@ -27,7 +28,9 @@ export default function AboutUs() {
 							<IoMdCheckmarkCircleOutline className={css.styleP} />
 							<p className={css.styleP}>Сервіс європейського рівня</p>
 						</div>
-						<button className={css.buttonDetail}>Детальніше</button>
+						<Link to='/about' className={css.buttonDetail}>
+							Детальніше
+						</Link>
 					</div>
 				</div>
 			</div>

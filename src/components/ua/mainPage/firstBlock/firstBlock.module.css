@@ -218,8 +218,12 @@
 	font-size: 25px;
 	font-family: 'Work Sans', Arial, Tahoma;
 	cursor: pointer;
-	z-index: 10;
+	z-index: 20;
 	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
 }
 .titleButton::before {
 	content: '';

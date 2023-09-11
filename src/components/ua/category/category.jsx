@@ -11,6 +11,7 @@ const Category = ({ data }) => {
 	const [category, setCategory] = useState('');
 	const [pidCategory, setPidCategory] = useState('');
 	const [sendMessage, setSendMessage] = useState(false);
+
 	return (
 		<>
 			<HeaderAll />
@@ -20,7 +21,11 @@ const Category = ({ data }) => {
 				setCategory={setCategory}
 				setPidCategory={setPidCategory}
 			/>
-			<ProductList setSendMessage={setSendMessage} />
+			<ProductList
+				setSendMessage={setSendMessage}
+				category={category}
+				pidCategory={pidCategory}
+			/>
 			{sendMessage && <SendOrder setSendMessage={setSendMessage} />}
 			<Footer />
 		</>
