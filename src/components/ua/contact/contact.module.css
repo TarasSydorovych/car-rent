@@ -183,3 +183,107 @@
 	width: 50%;
 	height: 500px;
 }
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+	.contactUsH1Top {
+		font-size: 30px;
+	}
+	.connectFormAllWrap {
+		flex-direction: column;
+	}
+	.blockWithPicS {
+		width: 100%;
+		height: 600px;
+	}
+	.formSContact {
+		width: 100%;
+	}
+	.contactUsH2 {
+		font-size: 30px;
+	}
+	.ourContactInf {
+		font-size: 30px;
+	}
+	.wrapMapInf {
+		flex-direction: column;
+	}
+	.wrapSmSm {
+		width: 80%;
+	}
+	.iconFirst {
+		font-size: 30px;
+	}
+	.titleAdr {
+		font-size: 20px;
+	}
+	.titleP {
+		font-size: 13px;
+	}
+	.pictureFon {
+		width: 100%;
+		height: 500px;
+	}
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) {
+	.contactUsH1Top {
+		font-size: 30px;
+	}
+	.connectFormAllWrap {
+		flex-direction: column;
+	}
+	.blockWithPicS {
+		width: 100%;
+		height: 600px;
+	}
+	.formSContact {
+		width: 100%;
+	}
+	.contactUsH2 {
+		font-size: 30px;
+	}
+	.ourContactInf {
+		font-size: 30px;
+	}
+	.wrapMapInf {
+		flex-direction: column;
+	}
+	.wrapSmSm {
+		width: 80%;
+	}
+	.pictureFon {
+		width: 80%;
+		height: 500px;
+	}
+}
+@media only screen and (max-width: 1440px) and (min-width: 1024px) {
+}
+@media only screen and (max-width: 1024px) and (min-width: 701px) {
+	.contactUsH1Top {
+		font-size: 30px;
+	}
+	.connectFormAllWrap {
+		flex-direction: column;
+	}
+	.blockWithPicS {
+		width: 100%;
+		height: 600px;
+	}
+	.formSContact {
+		width: 100%;
+	}
+	.contactUsH2 {
+		font-size: 30px;
+	}
+	.ourContactInf {
+		font-size: 30px;
+	}
+	.wrapMapInf {
+		flex-direction: column;
+	}
+	.wrapSmSm {
+		width: 80%;
+	}
+	.pictureFon {
+		width: 80%;
+		height: 500px;
+	}
+}

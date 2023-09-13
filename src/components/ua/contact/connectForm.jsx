@@ -1,6 +1,6 @@
 import css from './contact.module.css';
 import { useState } from 'react';
-export default function ConnectForm() {
+export default function ConnectForm({ t }) {
 	const [phone, setPhone] = useState('');
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
@@ -26,7 +26,9 @@ export default function ConnectForm() {
 		<div className={css.connectFormAllWrap}>
 			<div className={css.blockWithPicS}></div>
 			<div className={css.formSContact}>
-				<h2 className={css.contactUsH2}>Давайте зв'яжемося</h2>
+				<h2 className={css.contactUsH2}>
+					{t('description.part1.contact.getConnect')}
+				</h2>
 				<form className={css.contactFormik}>
 					<input
 						type='text'
@@ -36,14 +38,14 @@ export default function ConnectForm() {
 						name='name'
 						required
 						value={name}
-						placeholder="Ваше ім'я"
+						placeholder={t('description.part1.contact.name')}
 					/>
 					<input
 						type='text'
 						className={css.formicInputs}
 						value={email}
 						onChange={handleEmailChange}
-						placeholder='Ваш Email'
+						placeholder={t('description.part1.contact.email')}
 					/>
 					<input
 						className={css.formicInputs}
@@ -53,17 +55,17 @@ export default function ConnectForm() {
 						pattern='[0-9]{10}'
 						required
 						value={phone}
-						placeholder='Ваш телефон'
+						placeholder={t('description.part1.contact.phone')}
 						onChange={handlePhoneChange}
 					/>
 					<textarea
 						className={css.formicArea}
-						placeholder='Ваше повідомлення'
+						placeholder={t('description.part1.contact.message')}
 						onChange={handleMessageChange}
 						value={message}
 					/>
 					<button disabled={isSubmitDisabled} className={css.buttonFormicSend}>
-						Відправити повідомлення
+						{t('description.part1.contact.buttonSend')}
 					</button>
 				</form>
 			</div>

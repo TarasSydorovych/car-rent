@@ -34,6 +34,8 @@
 	border-radius: 20px;
 }
 .picInProd {
+	width: 359px;
+	height: 235px;
 }
 .wrapInformation {
 	width: 50%;
@@ -151,6 +153,7 @@
 .aiOutlineDown {
 	font-size: 30px;
 	color: var(--standart-color);
+	flex-shrink: 0;
 }
 .questionAnswer {
 	font-family: var(--custom-font);
@@ -173,4 +176,165 @@
 	font-family: var(--custom-font);
 	font-size: 25px;
 	font-weight: bolder;
+}
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+	.smallWrapForAuto {
+		width: 100%;
+		flex-direction: column;
+	}
+	.wrapAuto {
+		width: 300px;
+		height: 200px;
+	}
+	.picInProd {
+		width: 280px;
+		height: 160px;
+	}
+	.wrapInformation {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		align-self: center;
+	}
+	.smallWrapPrice {
+		width: calc(90% - 2px);
+		border-radius: 8px;
+	}
+	.smallWrapPriceSec {
+		width: calc(90% - 2px);
+		border-radius: 8px;
+	}
+	.oneQuestionWrap {
+		width: 95%;
+	}
+	.oneQuestionWrapSmall {
+		width: 95%;
+		height: auto;
+	}
+	.questionTitle {
+		width: calc(100% - 22px);
+		height: auto;
+		border: 1px solid var(--standart-color);
+		display: flex;
+		padding-left: 10px;
+		padding-right: 10px;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+	.queTitle {
+		font-size: 18px;
+	}
+	.theTextP {
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) {
+	.smallWrapForAuto {
+		width: 100%;
+		flex-direction: column;
+	}
+	.wrapAuto {
+		width: 300px;
+		height: 200px;
+	}
+	.picInProd {
+		width: 280px;
+		height: 160px;
+	}
+	.wrapInformation {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		align-self: center;
+	}
+	.smallWrapPrice {
+		width: calc(90% - 2px);
+		border-radius: 8px;
+	}
+	.smallWrapPriceSec {
+		width: calc(90% - 2px);
+		border-radius: 8px;
+	}
+	.oneQuestionWrap {
+		width: 95%;
+	}
+	.oneQuestionWrapSmall {
+		width: 95%;
+		height: auto;
+	}
+	.questionTitle {
+		width: calc(100% - 22px);
+		height: auto;
+		border: 1px solid var(--standart-color);
+		display: flex;
+		padding-left: 10px;
+		padding-right: 10px;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+	.queTitle {
+		font-size: 18px;
+	}
+	.theTextP {
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width: 1440px) and (min-width: 1024px) {
+}
+@media only screen and (max-width: 1024px) and (min-width: 701px) {
+	.smallWrapForAuto {
+		width: 100%;
+		flex-direction: column;
+	}
+	.wrapAuto {
+		width: 500px;
+		height: 300px;
+	}
+	.picInProd {
+		width: 359px;
+		height: 235px;
+	}
+	.wrapInformation {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		align-self: center;
+	}
+	.smallWrapPrice {
+		width: calc(90% - 2px);
+		border-radius: 8px;
+	}
+	.smallWrapPriceSec {
+		width: calc(90% - 2px);
+		border-radius: 8px;
+	}
+	.oneQuestionWrap {
+		width: 95%;
+	}
+	.oneQuestionWrapSmall {
+		width: 95%;
+		height: auto;
+	}
+	.questionTitle {
+		width: calc(100% - 22px);
+		height: auto;
+		border: 1px solid var(--standart-color);
+		display: flex;
+		padding-left: 10px;
+		padding-right: 10px;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+	.queTitle {
+		font-size: 18px;
+	}
+	.theTextP {
+		font-size: 18px;
+	}
 }

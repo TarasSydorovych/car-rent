@@ -1,6 +1,6 @@
 import css from './sendForm.module.css';
 import { useState } from 'react';
-export default function SendForm() {
+export default function SendForm({ t }) {
 	const [phone, setPhone] = useState('');
 	const [name, setName] = useState('');
 	const handlePhoneChange = (event) => {
@@ -14,7 +14,7 @@ export default function SendForm() {
 	const isSubmitDisabled = phone.length < 13;
 	return (
 		<section className={css.sendFormWrap}>
-			<h2 className={css.formSendH2}>Замовити авто</h2>
+			<h2 className={css.formSendH2}>{t('description.part1.sendForm.orH')}</h2>
 			<div className={css.formWrap}>
 				<input
 					type='text'
@@ -22,7 +22,7 @@ export default function SendForm() {
 					name='name'
 					required
 					value={name}
-					placeholder="Ім'я"
+					placeholder={`${t('description.part1.sendForm.name')}`}
 					onChange={handleNameChange}
 					className={css.inputName}
 				/>
@@ -33,7 +33,7 @@ export default function SendForm() {
 					pattern='[0-9]{10}'
 					required
 					value={phone}
-					placeholder='Телефон'
+					placeholder={`${t('description.part1.sendForm.phone')}`}
 					onChange={handlePhoneChange}
 					className={css.inputPhone}
 				/>
@@ -42,7 +42,7 @@ export default function SendForm() {
 					type='submit'
 					disabled={isSubmitDisabled}
 				>
-					Замовити авто
+					{t('description.part1.sendForm.orB')}
 				</button>
 			</div>
 		</section>

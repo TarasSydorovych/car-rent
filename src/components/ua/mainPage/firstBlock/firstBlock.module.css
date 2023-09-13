@@ -258,3 +258,568 @@
 	text-decoration: none;
 	margin-left: 10px;
 }
+.rxHamburgerMenu {
+	color: white;
+	font-size: 50px;
+	cursor: pointer;
+}
+.burgerMenuWrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий фон (RGBA) */
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.closeBurgerMenu {
+	color: white;
+	align-self: flex-end;
+	cursor: pointer;
+	font-size: 50px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+	.headerFirstWrap {
+		width: 100%;
+		height: auto;
+		background-color: var(--standart-color);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.headerFirstWrapDiv {
+		width: 90%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.transparentHeader {
+		background-color: transparent; /* Зробіть фон повністю прозорим */
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		position: fixed;
+		top: auto;
+		width: 100%;
+		height: 100px;
+		z-index: 1000;
+
+		transition:
+			opacity 0.3s ease,
+			transform 0.5s ease; /* Плавна анімація показу */
+	}
+	.hero {
+		background-image: url('../../../../img/slide1.webp');
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		width: 100%;
+		position: absolute;
+		top: auto;
+	}
+	.listStyle {
+		width: 80%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		opacity: 1;
+		color: white;
+		list-style-type: none;
+	}
+	.listLi {
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: var(--custom-font);
+		font-size: 30px;
+		font-weight: bolder;
+	}
+	.hWrap {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+		height: 60%;
+		width: 90%;
+	}
+	.topH1InFirst {
+		font-family: 'Work Sans', Arial, Tahoma;
+		font-size: 30px;
+		align-self: flex-start;
+
+		color: #1a2126;
+		margin-bottom: 0;
+		text-shadow:
+			2px 0 0 #27ba7a,
+			-2px 0 0 #27ba7a,
+			0 2px 0 #27ba7a,
+			0 -2px 0 #27ba7a,
+			1px 1px #27ba7a,
+			-1px -1px 0 #27ba7a,
+			1px -1px 0 #27ba7a,
+			-1px 1px 0 #27ba7a;
+	}
+	.topH1InFirstSecond {
+		font-family: 'Work Sans', Arial, Tahoma;
+		color: white;
+		font-size: 25px;
+		margin-bottom: 0;
+	}
+	.styleP {
+		font-family: 'Work Sans', Arial, Tahoma;
+		color: white;
+		font-size: 20px;
+	}
+	.titleButton {
+		position: relative;
+		width: 250px;
+		height: 50px;
+		background: none;
+		border: 0;
+		color: white;
+		font-size: 20px;
+		font-family: 'Work Sans', Arial, Tahoma;
+		cursor: pointer;
+		z-index: 20;
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+	}
+	.titleButton::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 35%;
+		height: 100%;
+		background: var(--standart-color);
+		z-index: -1;
+		color: white;
+		font-size: 25px;
+		font-family: 'Jost', sans-serif;
+	}
+	.titleButton:hover::before {
+		width: 100%;
+		transition: all 0.5s ease-in-out;
+	}
+	.logo {
+		font-family: 'Permanent Marker', cursive;
+		color: white;
+		font-size: 20px;
+		font-weight: bolder;
+		text-decoration: none;
+	}
+	.logoSpan {
+		font-family: 'Permanent Marker', cursive;
+		color: var(--standart-color);
+		font-size: 20px;
+		font-weight: bolder;
+	}
+	.languageP {
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: var(--custom-font);
+		font-size: 15px;
+		font-weight: bolder;
+		cursor: pointer;
+		text-decoration: none;
+		margin-left: 2px;
+	}
+	.rxHamburgerMenu {
+		color: white;
+		font-size: 30px;
+		cursor: pointer;
+	}
+	.sticky {
+		background-color: rgba(
+			0,
+			0,
+			0,
+			0.9
+		); /* Змінюємо колір фону для видимості */
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transition:
+			opacity 0.3s ease,
+			transform 0.5s ease;
+	}
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) {
+	.headerFirstWrap {
+		width: 100%;
+		height: auto;
+		background-color: var(--standart-color);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.headerFirstWrapDiv {
+		width: 90%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.transparentHeader {
+		background-color: transparent; /* Зробіть фон повністю прозорим */
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		position: fixed;
+		top: auto;
+		width: 100%;
+		height: 100px;
+		z-index: 1000;
+
+		transition:
+			opacity 0.3s ease,
+			transform 0.5s ease; /* Плавна анімація показу */
+	}
+	.hero {
+		background-image: url('../../../../img/slide1.webp');
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		width: 100%;
+		position: absolute;
+		top: auto;
+	}
+	.listStyle {
+		width: 80%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		opacity: 1;
+		color: white;
+		list-style-type: none;
+	}
+	.listLi {
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: var(--custom-font);
+		font-size: 30px;
+		font-weight: bolder;
+	}
+	.hWrap {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+		height: 60%;
+		width: 90%;
+	}
+	.topH1InFirst {
+		font-family: 'Work Sans', Arial, Tahoma;
+		font-size: 30px;
+		align-self: flex-start;
+
+		color: #1a2126;
+		margin-bottom: 0;
+		text-shadow:
+			2px 0 0 #27ba7a,
+			-2px 0 0 #27ba7a,
+			0 2px 0 #27ba7a,
+			0 -2px 0 #27ba7a,
+			1px 1px #27ba7a,
+			-1px -1px 0 #27ba7a,
+			1px -1px 0 #27ba7a,
+			-1px 1px 0 #27ba7a;
+	}
+	.topH1InFirstSecond {
+		font-family: 'Work Sans', Arial, Tahoma;
+		color: white;
+		font-size: 25px;
+		margin-bottom: 0;
+	}
+	.styleP {
+		font-family: 'Work Sans', Arial, Tahoma;
+		color: white;
+		font-size: 20px;
+	}
+	.titleButton {
+		position: relative;
+		width: 250px;
+		height: 50px;
+		background: none;
+		border: 0;
+		color: white;
+		font-size: 20px;
+		font-family: 'Work Sans', Arial, Tahoma;
+		cursor: pointer;
+		z-index: 20;
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+	}
+	.titleButton::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 35%;
+		height: 100%;
+		background: var(--standart-color);
+		z-index: -1;
+		color: white;
+		font-size: 25px;
+		font-family: 'Jost', sans-serif;
+	}
+	.titleButton:hover::before {
+		width: 100%;
+		transition: all 0.5s ease-in-out;
+	}
+	.logo {
+		font-family: 'Permanent Marker', cursive;
+		color: white;
+		font-size: 20px;
+		font-weight: bolder;
+		text-decoration: none;
+	}
+	.logoSpan {
+		font-family: 'Permanent Marker', cursive;
+		color: var(--standart-color);
+		font-size: 20px;
+		font-weight: bolder;
+	}
+	.languageP {
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: var(--custom-font);
+		font-size: 15px;
+		font-weight: bolder;
+		cursor: pointer;
+		text-decoration: none;
+		margin-left: 2px;
+	}
+	.rxHamburgerMenu {
+		color: white;
+		font-size: 30px;
+		cursor: pointer;
+	}
+	.sticky {
+		background-color: rgba(
+			0,
+			0,
+			0,
+			0.9
+		); /* Змінюємо колір фону для видимості */
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transition:
+			opacity 0.3s ease,
+			transform 0.5s ease;
+	}
+}
+@media only screen and (max-width: 1440px) and (min-width: 1024px) {
+	.listStyle {
+		width: 50%;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		opacity: 1;
+		color: white;
+		list-style-type: none;
+	}
+}
+@media only screen and (max-width: 1024px) and (min-width: 701px) {
+	.headerFirstWrap {
+		width: 100%;
+		height: auto;
+		background-color: var(--standart-color);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.headerFirstWrapDiv {
+		width: 90%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.transparentHeader {
+		background-color: transparent; /* Зробіть фон повністю прозорим */
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		position: fixed;
+		top: auto;
+		width: 100%;
+		height: 100px;
+		z-index: 1000;
+
+		transition:
+			opacity 0.3s ease,
+			transform 0.5s ease; /* Плавна анімація показу */
+	}
+	.hero {
+		background-image: url('../../../../img/slide1.webp');
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		width: 100%;
+		position: absolute;
+		top: auto;
+	}
+	.listStyle {
+		width: 80%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		opacity: 1;
+		color: white;
+		list-style-type: none;
+	}
+	.listLi {
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: var(--custom-font);
+		font-size: 30px;
+		font-weight: bolder;
+	}
+	.hWrap {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+		height: 60%;
+		width: 90%;
+	}
+	.topH1InFirst {
+		font-family: 'Work Sans', Arial, Tahoma;
+		font-size: 30px;
+		align-self: flex-start;
+
+		color: #1a2126;
+		margin-bottom: 0;
+		text-shadow:
+			2px 0 0 #27ba7a,
+			-2px 0 0 #27ba7a,
+			0 2px 0 #27ba7a,
+			0 -2px 0 #27ba7a,
+			1px 1px #27ba7a,
+			-1px -1px 0 #27ba7a,
+			1px -1px 0 #27ba7a,
+			-1px 1px 0 #27ba7a;
+	}
+	.topH1InFirstSecond {
+		font-family: 'Work Sans', Arial, Tahoma;
+		color: white;
+		font-size: 25px;
+		margin-bottom: 0;
+	}
+	.styleP {
+		font-family: 'Work Sans', Arial, Tahoma;
+		color: white;
+		font-size: 20px;
+	}
+	.titleButton {
+		position: relative;
+		width: 250px;
+		height: 50px;
+		background: none;
+		border: 0;
+		color: white;
+		font-size: 20px;
+		font-family: 'Work Sans', Arial, Tahoma;
+		cursor: pointer;
+		z-index: 20;
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+	}
+	.titleButton::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 35%;
+		height: 100%;
+		background: var(--standart-color);
+		z-index: -1;
+		color: white;
+		font-size: 25px;
+		font-family: 'Jost', sans-serif;
+	}
+	.titleButton:hover::before {
+		width: 100%;
+		transition: all 0.5s ease-in-out;
+	}
+	.logo {
+		font-family: 'Permanent Marker', cursive;
+		color: white;
+		font-size: 20px;
+		font-weight: bolder;
+		text-decoration: none;
+	}
+	.logoSpan {
+		font-family: 'Permanent Marker', cursive;
+		color: var(--standart-color);
+		font-size: 20px;
+		font-weight: bolder;
+	}
+	.languageP {
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: var(--custom-font);
+		font-size: 15px;
+		font-weight: bolder;
+		cursor: pointer;
+		text-decoration: none;
+		margin-left: 2px;
+	}
+	.rxHamburgerMenu {
+		color: white;
+		font-size: 30px;
+		cursor: pointer;
+	}
+	.sticky {
+		background-color: rgba(
+			0,
+			0,
+			0,
+			0.9
+		); /* Змінюємо колір фону для видимості */
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transition:
+			opacity 0.3s ease,
+			transform 0.5s ease;
+	}
+}

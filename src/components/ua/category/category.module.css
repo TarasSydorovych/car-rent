@@ -206,3 +206,24 @@
 	margin-top: 30px;
 	cursor: pointer;
 }
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+	.categoryListWrap {
+		width: 98%;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.ulListLi {
+		font-family: var(--custom-font);
+		font-size: 20px;
+		font-weight: bolder;
+		cursor: pointer;
+	}
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) {
+}
+@media only screen and (max-width: 1440px) and (min-width: 1024px) {
+}
+@media only screen and (max-width: 1024px) and (min-width: 701px) {
+}

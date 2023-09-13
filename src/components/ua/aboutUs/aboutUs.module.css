@@ -87,3 +87,123 @@
 	text-align: center;
 	width: 350px;
 }
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+	.blockShortDescWrap {
+		flex-direction: column;
+	}
+	.blockDescTextWr {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 90%;
+	}
+	.descTextH1 {
+		font-family: var(--custom-font);
+		font-weight: bolder;
+		font-size: 30px;
+		color: black;
+		margin-bottom: 0;
+	}
+	.blockDescPicWr {
+		width: 300px;
+		height: 250px;
+	}
+	.listQuoWrap {
+		flex-direction: column;
+	}
+	.oneOfListWrap {
+		width: 300px;
+	}
+	.forIcH4 {
+		font-size: 20px;
+	}
+	.forIcP {
+		font-size: 17px;
+
+		width: 300px;
+	}
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) {
+	.blockShortDescWrap {
+		flex-direction: column;
+	}
+	.blockDescTextWr {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 90%;
+	}
+	.descTextH1 {
+		font-family: var(--custom-font);
+		font-weight: bolder;
+		font-size: 30px;
+		color: black;
+		margin-bottom: 0;
+	}
+	.blockDescPicWr {
+		width: 300px;
+		height: 250px;
+	}
+	.listQuoWrap {
+		flex-direction: column;
+	}
+	.oneOfListWrap {
+		width: 300px;
+	}
+	.forIcH4 {
+		font-size: 20px;
+	}
+	.forIcP {
+		font-size: 17px;
+
+		width: 300px;
+	}
+}
+@media only screen and (max-width: 1440px) and (min-width: 1024px) {
+	.forIcH4 {
+		font-size: 20px;
+	}
+	.forIcP {
+		font-family: var(--custom-font);
+		font-weight: bolder;
+		font-size: 17px;
+
+		width: 350px;
+	}
+}
+@media only screen and (max-width: 1024px) and (min-width: 701px) {
+	.blockShortDescWrap {
+		flex-direction: column;
+	}
+	.blockDescTextWr {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 90%;
+	}
+	.descTextH1 {
+		font-family: var(--custom-font);
+		font-weight: bolder;
+		font-size: 30px;
+		color: black;
+		margin-bottom: 0;
+	}
+	.blockDescPicWr {
+		width: 300px;
+		height: 250px;
+	}
+	.listQuoWrap {
+		flex-direction: column;
+	}
+	.oneOfListWrap {
+		width: 300px;
+	}
+	.forIcH4 {
+		font-size: 20px;
+	}
+	.forIcP {
+		font-size: 17px;
+
+		width: 300px;
+	}
+}

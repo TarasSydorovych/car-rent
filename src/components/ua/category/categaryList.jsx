@@ -1,6 +1,6 @@
 import withFirebaseCollection from '../../HOK/withFirebaseCollection';
 import css from './category.module.css';
-const CategoryList = ({ dataCat, data, setCategory, setPidCategory }) => {
+const CategoryList = ({ dataCat, data, setCategory, setPidCategory, t }) => {
 	const changeCategory = (name) => {
 		setCategory(name);
 		setPidCategory('');
@@ -14,24 +14,40 @@ const CategoryList = ({ dataCat, data, setCategory, setPidCategory }) => {
 			<div className={css.categoryListWrap}>
 				<ul className={css.ulListCategory}>
 					{dataCat.map((el, index) => {
+						let classAuto = '';
+						if (el.class === 'Бізнес') {
+							classAuto = `${t('description.part1.category.busines')}`;
+						} else if (el.class === 'Економ') {
+							classAuto = `${t('description.part1.category.econom')}`;
+						} else if (el.class === 'Преміум') {
+							classAuto = `${t('description.part1.category.premium')}`;
+						}
 						return (
 							<li
 								onClick={() => changeCategory(el.class)}
 								key={index}
 								className={css.ulListLi}
 							>
-								{el.class}
+								{classAuto}
 							</li>
 						);
 					})}
 					{data.map((el, index) => {
+						let classAuto = '';
+						if (el.class === 'Мікроавтобуси') {
+							classAuto = `${t('description.part1.category.bus')}`;
+						} else if (el.class === 'Позашляховик') {
+							classAuto = `${t('description.part1.category.Vned')}`;
+						} else if (el.class === 'Легкові') {
+							classAuto = `${t('description.part1.category.legcov')}`;
+						}
 						return (
 							<li
 								onClick={() => changePidCategory(el.class)}
 								key={index}
 								className={css.ulListLi}
 							>
-								{el.class}
+								{classAuto}
 							</li>
 						);
 					})}

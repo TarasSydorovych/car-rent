@@ -250,3 +250,230 @@
 	text-decoration: none;
 	margin-left: 10px;
 }
+.burgerMenuWrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий фон (RGBA) */
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.closeBurgerMenu {
+	color: white;
+	align-self: flex-end;
+	cursor: pointer;
+	font-size: 50px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+	.logo {
+		font-family: 'Permanent Marker', cursive;
+		color: black;
+		font-size: 25px;
+		font-weight: bolder;
+		text-decoration: none;
+	}
+	.logoSpan {
+		font-family: 'Permanent Marker', cursive;
+		color: var(--standart-color);
+		font-size: 25px;
+		font-weight: bolder;
+	}
+	.headerFirstWrap {
+		width: 100%;
+		height: auto;
+		background-color: var(--standart-color);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.headerFirstWrapDiv {
+		width: 90%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.transparentHeader {
+		background-color: white; /* Зробіть фон повністю прозорим */
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		width: 100%;
+		height: 100px;
+		z-index: 1000;
+
+		transition:
+			opacity 0.3s ease,
+			transform 0.5s ease; /* Плавна анімація показу */
+	}
+	.listStyle {
+		width: 80%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		opacity: 1;
+		color: white;
+		list-style-type: none;
+	}
+	.listLi {
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: var(--custom-font);
+		font-size: 30px;
+		font-weight: bolder;
+	}
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) {
+	.logo {
+		font-family: 'Permanent Marker', cursive;
+		color: black;
+		font-size: 25px;
+		font-weight: bolder;
+		text-decoration: none;
+	}
+	.logoSpan {
+		font-family: 'Permanent Marker', cursive;
+		color: var(--standart-color);
+		font-size: 25px;
+		font-weight: bolder;
+	}
+	.headerFirstWrap {
+		width: 100%;
+		height: auto;
+		background-color: var(--standart-color);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.headerFirstWrapDiv {
+		width: 90%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.transparentHeader {
+		background-color: white; /* Зробіть фон повністю прозорим */
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		width: 100%;
+		height: 100px;
+		z-index: 1000;
+
+		transition:
+			opacity 0.3s ease,
+			transform 0.5s ease; /* Плавна анімація показу */
+	}
+	.listStyle {
+		width: 80%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		opacity: 1;
+		color: white;
+		list-style-type: none;
+	}
+	.listLi {
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: var(--custom-font);
+		font-size: 30px;
+		font-weight: bolder;
+	}
+}
+@media only screen and (max-width: 1440px) and (min-width: 1024px) {
+	.listStyle {
+		width: 50%;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		opacity: 1;
+		color: white;
+		list-style-type: none;
+	}
+}
+@media only screen and (max-width: 1024px) and (min-width: 701px) {
+	.logo {
+		font-family: 'Permanent Marker', cursive;
+		color: black;
+		font-size: 25px;
+		font-weight: bolder;
+		text-decoration: none;
+	}
+	.logoSpan {
+		font-family: 'Permanent Marker', cursive;
+		color: var(--standart-color);
+		font-size: 25px;
+		font-weight: bolder;
+	}
+	.headerFirstWrap {
+		width: 100%;
+		height: auto;
+		background-color: var(--standart-color);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.headerFirstWrapDiv {
+		width: 90%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.transparentHeader {
+		background-color: white; /* Зробіть фон повністю прозорим */
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		width: 100%;
+		height: 100px;
+		z-index: 1000;
+
+		transition:
+			opacity 0.3s ease,
+			transform 0.5s ease; /* Плавна анімація показу */
+	}
+	.listStyle {
+		width: 80%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		opacity: 1;
+		color: white;
+		list-style-type: none;
+	}
+	.listLi {
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: var(--custom-font);
+		font-size: 30px;
+		font-weight: bolder;
+	}
+}

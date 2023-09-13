@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import withFirebaseCollection from '../../HOK/withFirebaseCollection';
 import css from './category.module.css';
 import ProductInCat from './productInCat';
-const ProductList = ({ data, setSendMessage, pidCategory, category }) => {
+const ProductList = ({ data, setSendMessage, pidCategory, category, t }) => {
 	const [filteredData, setFilteredData] = useState([]);
 	useEffect(() => {
 		// Функція для фільтрації товарів на основі умов
@@ -28,7 +28,12 @@ const ProductList = ({ data, setSendMessage, pidCategory, category }) => {
 		<section className={css.prodListWrap}>
 			{filteredData.map((el, index) => {
 				return (
-					<ProductInCat setSendMessage={setSendMessage} key={index} el={el} />
+					<ProductInCat
+						setSendMessage={setSendMessage}
+						key={index}
+						el={el}
+						t={t}
+					/>
 				);
 			})}
 		</section>

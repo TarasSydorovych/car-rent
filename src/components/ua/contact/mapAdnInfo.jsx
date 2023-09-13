@@ -2,25 +2,36 @@ import css from './contact.module.css';
 import { IoIosPin } from 'react-icons/io';
 import { AiOutlinePhone, AiOutlineMail } from 'react-icons/ai';
 
-export default function MapAdnInfo() {
+export default function MapAdnInfo({ t }) {
 	return (
 		<section className={css.wrapMapAdnLocal}>
-			<h5 className={css.mapH5}>ЗАЛИШАЙТЕСЯ З НАМИ НА ЗВ'ЯЗКУ</h5>
-			<h1 className={css.ourContactInf}>Наша контактна інформація</h1>
+			<h5 className={css.mapH5}>
+				{t('description.part1.contact.beInContact')}
+			</h5>
+			<h1 className={css.ourContactInf}>
+				{t('description.part1.contact.ourInfo')}
+			</h1>
 			<div className={css.wrapMapInf}>
 				<div className={css.wrapSmSm}>
 					<div className={css.wrapSmSmSm}>
 						<div className={css.informWrapText}>
 							<IoIosPin className={css.iconFirst} />
 							<div className={css.informWrapTextSm}>
-								<h4 className={css.titleAdr}>Адреса</h4>
-								<p className={css.titleP}>Львів, вул. Личаківськ, 1А</p>
+								<h4 className={css.titleAdr}>
+									{t('description.part1.contact.adressFir')}
+								</h4>
+								<p className={css.titleP}>
+									{t('description.part1.contact.adressTwo')}
+								</p>
 							</div>
 						</div>
 						<div className={css.informWrapText}>
 							<AiOutlinePhone className={css.iconFirst} />
 							<div className={css.informWrapTextSm}>
-								<h4 className={css.titleAdr}>Телефон</h4>
+								<h4 className={css.titleAdr}>
+									{' '}
+									{t('description.part1.contact.tel')}
+								</h4>
 								<p className={css.titleP}>+380939994499</p>
 							</div>
 						</div>

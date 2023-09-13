@@ -85,7 +85,7 @@
 .categoryPrice {
 	font-family: var(--custom-font);
 	font-size: 20px;
-	color: var(--standart-color);
+	color: #075f39;
 	font-weight: bold;
 	transition: margin-left 0.8s ease;
 }
@@ -96,4 +96,111 @@
 }
 .linkToCat {
 	text-decoration: none;
+}
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+	.secondBlockWrapDiv {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: auto;
+	}
+	.blockAutoWrap {
+		width: 300px;
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 5px;
+		overflow: hidden;
+		transition: background-color 0.8s ease; /* Плавна зміна кольору фону */
+		background-color: white; /* Початковий колір фону */
+		cursor: pointer;
+	}
+	.categoryName {
+		font-family: var(--custom-font);
+		font-size: 20px;
+		color: black;
+		font-weight: bolder;
+		transition: margin-left 0.8s ease;
+	}
+	.categoryPrice {
+		font-family: var(--custom-font);
+		font-size: 17px;
+		color: #075f39;
+		font-weight: bold;
+		transition: margin-left 0.8s ease;
+	}
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) {
+	.secondBlockWrapDiv {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: auto;
+	}
+	.blockAutoWrap {
+		width: 300px;
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 5px;
+		overflow: hidden;
+		transition: background-color 0.8s ease; /* Плавна зміна кольору фону */
+		background-color: white; /* Початковий колір фону */
+		cursor: pointer;
+	}
+	.categoryName {
+		font-family: var(--custom-font);
+		font-size: 20px;
+		color: black;
+		font-weight: bolder;
+		transition: margin-left 0.8s ease;
+	}
+	.categoryPrice {
+		font-family: var(--custom-font);
+		font-size: 17px;
+		color: #075f39;
+		font-weight: bold;
+		transition: margin-left 0.8s ease;
+	}
+}
+@media only screen and (max-width: 1288px) and (min-width: 1024px) {
+}
+@media only screen and (max-width: 1024px) and (min-width: 701px) {
+	.secondBlockWrapDiv {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: auto;
+	}
+	.blockAutoWrap {
+		width: 300px;
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 5px;
+		overflow: hidden;
+		transition: background-color 0.8s ease; /* Плавна зміна кольору фону */
+		background-color: white; /* Початковий колір фону */
+		cursor: pointer;
+	}
+	.categoryName {
+		font-family: var(--custom-font);
+		font-size: 20px;
+		color: black;
+		font-weight: bolder;
+		transition: margin-left 0.8s ease;
+	}
+	.categoryPrice {
+		font-family: var(--custom-font);
+		font-size: 17px;
+		color: #075f39;
+		font-weight: bold;
+		transition: margin-left 0.8s ease;
+	}
 }

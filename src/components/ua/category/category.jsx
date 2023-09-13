@@ -7,24 +7,32 @@ import css from './category.module.css';
 import ContactLabel from './contactLabel';
 import ProductList from './productList';
 import SendOrder from './sendOrder';
+import { useTranslation, Trans } from 'react-i18next';
+import keyWord from '../../../function/keyWord';
 const Category = ({ data }) => {
+	const { t, i18n } = useTranslation();
 	const [category, setCategory] = useState('');
 	const [pidCategory, setPidCategory] = useState('');
 	const [sendMessage, setSendMessage] = useState(false);
-
+	keyWord(
+		`${t('description.seo.category.title')}`,
+		`${t('description.seo.category.description')}`,
+	);
 	return (
 		<>
 			<HeaderAll />
-			<ContactLabel />
+			<ContactLabel t={t} />
 			<CategoryList
 				dataCat={data}
 				setCategory={setCategory}
 				setPidCategory={setPidCategory}
+				t={t}
 			/>
 			<ProductList
 				setSendMessage={setSendMessage}
 				category={category}
 				pidCategory={pidCategory}
+				t={t}
 			/>
 			{sendMessage && <SendOrder setSendMessage={setSendMessage} />}
 			<Footer />

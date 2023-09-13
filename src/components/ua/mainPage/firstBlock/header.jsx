@@ -3,11 +3,11 @@ import css from './firstBlock.module.css';
 import HeaderFirst from './headerFirst';
 import HeaderSecond from './headerSecond';
 
-export default function Header() {
+export default function Header({ windowDimensions }) {
 	return (
 		<header className={css.headerWrap}>
 			<HeaderFirst />
-			<HeaderSecond />
+			<HeaderSecond windowDimensions={windowDimensions} />
 		</header>
 	);
 }

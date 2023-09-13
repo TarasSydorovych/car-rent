@@ -7,6 +7,7 @@ import withFirebaseCollection from '../../HOK/withFirebaseCollection';
 import SendOrder from '../category/sendOrder';
 import Questions from './questions';
 import Description from './description';
+import keyWord from '../../../function/keyWord';
 const Auto = ({ data }) => {
 	const [oneProd, setOneProd] = useState();
 	const [haveProd, setHaveProd] = useState(false);
@@ -44,6 +45,12 @@ const Auto = ({ data }) => {
 	const openMessage = () => {
 		setSendMessage(true);
 	};
+	if (haveProd) {
+		keyWord(
+			`Найкраща пропозиція: оренда ${oneProd.autoName} у Львові Car Rent Ukraine`,
+			`Орендуйте ${oneProd.autoName} в Львові від Car Rent Ukraine за доступною ціною. Забронюйте ${oneProd.autoName} прямо зараз та отримайте найкращу пропозицію.`,
+		);
+	}
 
 	return (
 		<>
