@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import css from './auto.module.css';
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
-export default function Questions({ oneProd }) {
+export default function Questions({ oneProd, t }) {
 	const [queOne, setqueOne] = useState(false);
 
 	const openFistBlock = () => {
@@ -9,64 +9,70 @@ export default function Questions({ oneProd }) {
 	};
 	const questions = [
 		{
-			title: `Скільки коштує прокат ${oneProd.autoName} у Львові?`,
-			answer: `Ціна на прокат автомобіля у Львові стартує від ${oneProd.fourPrice} UAH на добу,
-							все залежить від обраного Вами автомобіля та періоду прокату. Чим
-							більший термін оренди, тим нижча вартість прокату на добу.
-							Вартість оренди автомобілів від компанії Car Rent Ukraine.`,
+			title: `${t('description.part1.auto.firstAnsvTitileFirst')} ${
+				oneProd.autoName
+			} ${t('description.part1.auto.secondTitle')}?`,
+			answer: `${t('description.part1.auto.firstAnsvDescFirst')} ${
+				oneProd.fourPrice * 40
+			} ${t('description.part1.auto.firstAnsvDesceSecond')}`,
 		},
 		{
-			title: `Які умови оренди`,
-			answer: `Умови дуже прості. Клієнт повинен бути старше 21 року та мати досвід водіння більше 2-х років. Якщо ці умови не дотримані, то оренда можлива зі збільшеною заставою.`,
+			title: `${t('description.part1.que.titleq')}`,
+			answer: `${t('description.part1.que.answerq')}`,
 		},
 		{
-			title: `Яка застава необхідна для оренди ${oneProd.autoName} у Львові?`,
-			answer: `Застава для оренди ${oneProd.autoName} у Львові становить ${oneProd.rentPay} UAH. `,
+			title: `${t('description.part1.auto.secondAnsvTitileFirst')} ${
+				oneProd.autoName
+			} ${t('description.part1.auto.secondTitle')}?`,
+			answer: `${t('description.part1.auto.secondAnsvDescFirst')} ${
+				oneProd.autoName
+			} ${t('description.part1.auto.secondAnsvDesceSecond')} ${
+				oneProd.rentPay * 40
+			} UAH. `,
 		},
 		{
-			title: `Які документи потрібні для оренди?`,
-			answer: `Перед видачею автомобіля, необхідно надати оригінал паспорта та посвідчення водія з відповідною категорією. Для іноземців — міжнародні права та закордонний паспорт.`,
+			title: `${t('description.part1.que.titlew')}`,
+			answer: `${t('description.part1.que.answerw')}`,
 		},
 		{
-			title: `Які умови щодо пробігу?`,
-			answer: `
-На всі автомобілі встановлено обмеження 100 км на добу. Можна збільшити цю цифру до 400 км/день та більше, вибравши розширений пакет на прокат авто.`,
+			title: `${t('description.part1.que.titlee')}`,
+			answer: `${t('description.part1.que.answee')}`,
 		},
 		{
-			title: `Які умови страхування?`,
-			answer: `Повне страхування. Автомобілі застраховані по КАСКО та ОСЦПВ.`,
+			title: `${t('description.part1.que.titler')}`,
+			answer: `${t('description.part1.que.answerr')}`,
 		},
 		{
-			title: `Які способи оплати у Києві?`,
-			answer: `Можлива готівкова, безготівкова форма з ПДВ та оплата на банківську картку.`,
+			title: `${t('description.part1.que.titlet')}`,
+			answer: `${t('description.part1.que.answert')}`,
 		},
 		{
-			title: `Чи можна на вашому авто виїхати за кордон?`,
-			answer: `Так, на наших автомобілях можно виїжджати в страни Европейського союзу. Для цього ми додатково оформлюємо пакет - доручення для виїзду на авто та страховку Зелену картку (пакет сплачується окремо). Для оформлення пакету необхідно - 1-3 дня.`,
+			title: `${t('description.part1.que.titley')}`,
+			answer: `${t('description.part1.que.answery')}`,
 		},
 		{
-			title: `Можна взяти авто на весілля?`,
-			answer: `Так це можливо. Але ми не можемо гарантувати наявність конкретного авто та, в разі підміни, будемо змушені надати авто такого ж або вищого класу за раніше обумовленими домовленостями (умови та вартість).`,
+			title: `${t('description.part1.que.titleu')}`,
+			answer: `${t('description.part1.que.answeru')}`,
 		},
 		{
-			title: `Що, якщо я завдам шкоди автомобілю?`,
-			answer: `У цьому випадку відразу телефонуйте нам. З Вами зв'яжеться наш страховий агент та розповість, що потрібно робити. Всі автомобілі повністю застраховані, вам не варто турбуватися.`,
+			title: `${t('description.part1.que.titlei')}`,
+			answer: `${t('description.part1.que.answeri')}`,
 		},
 		{
-			title: `Чи можливе перебування за кермом кількох людей?`,
-			answer: `Так, можливо. Для цього потрібно додати додаткового водія в договір прокату. Ця послуга безкоштовна.`,
+			title: `${t('description.part1.que.titleo')}`,
+			answer: `${t('description.part1.que.answero')}`,
 		},
 		{
-			title: `Яка вартість додаткових послуг, таких як: навігатор, дитяче крісло, WI-FI роутер?`,
-			answer: `Так, всі ці опції є. Потрібно нас заздалегідь попередити. Оренда по 3 євро на добу або 15 євро на весь прокат при тривалій оренді.`,
+			title: `${t('description.part1.que.titlep')}`,
+			answer: `${t('description.part1.que.answerp')}`,
 		},
 		{
-			title: `Чи є можливість орендувати авто на юридичну особу?`,
-			answer: `Так, з юр. особами працюємо. Оплату приймаємо безготівковою формою з ПДВ. `,
+			title: `${t('description.part1.que.titlea')}`,
+			answer: `${t('description.part1.que.answera')}`,
 		},
 		{
-			title: `Що входить у вартість оренди?`,
-			answer: `У вартість оренди авто входить: повністю застрахований, чистий автомобіль з повним баком, персональний онлайн менеджер на весь період прокату та цілодобова підтримка.`,
+			title: `${t('description.part1.que.titles')}`,
+			answer: `${t('description.part1.que.answers')}`,
 		},
 	];
 	const [openedQuestionIndex, setOpenedQuestionIndex] = useState(null);
@@ -81,7 +87,8 @@ export default function Questions({ oneProd }) {
 	return (
 		<section className={css.sectionWrap}>
 			<h3 className={css.h3InQue}>
-				ПИТАННЯ І ВІДПОВІДІ ПРО ОРЕНДУ {oneProd.autoName} У ЛЬВОВІ
+				{t('description.part1.auto.titleQuestionFirst')}&nbsp;
+				{oneProd.autoName}&nbsp;{t('description.part1.auto.secondTitle')}
 			</h3>
 			{/*<div className={css.oneQuestionWrap}>
 				<div className={css.oneQuestionWrapSmall}>

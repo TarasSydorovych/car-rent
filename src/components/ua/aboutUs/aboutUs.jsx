@@ -5,17 +5,19 @@ import css from './aboutUs.module.css';
 import BlockShortAb from './blockShortAb';
 import ListOfQuolytu from './listOfQuolytu';
 import keyWord from '../../../function/keyWord';
+import { useTranslation, Trans } from 'react-i18next';
 export default function AboutUs() {
+	const { t, i18n } = useTranslation();
 	keyWord(
-		'Car Rent Ukraine | Оренда Авто у Львові - Ваш надійний партнер',
-		'Дізнайтеся більше про нас, провідну компанію з оренди авто в Львові. Ми пропонуємо високоякісний сервіс та широкий вибір автомобілів для вашої подорожі.',
+		`${t('description.seo.about.title')}`,
+		`${t('description.seo.about.description')}`,
 	);
 	return (
 		<section>
 			<HeaderAll />
-			<AboutLabel />
-			<BlockShortAb />
-			<ListOfQuolytu />
+			<AboutLabel t={t} />
+			<BlockShortAb t={t} />
+			<ListOfQuolytu t={t} />
 			<Footer />
 		</section>
 	);

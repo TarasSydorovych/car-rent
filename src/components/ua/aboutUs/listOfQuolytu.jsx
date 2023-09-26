@@ -2,28 +2,30 @@ import css from './aboutUs.module.css';
 import { TfiCup } from 'react-icons/tfi';
 import { BiHappyBeaming } from 'react-icons/bi';
 import { AiFillSignal } from 'react-icons/ai';
-export default function ListOfQuolytu() {
+export default function ListOfQuolytu({ t }) {
 	return (
 		<section className={css.listQuoWrap}>
 			<div className={css.oneOfListWrap}>
 				<TfiCup className={css.iconCupSt} />
-				<h4 className={css.forIcH4}>10 років на ринку</h4>
-				<p className={css.forIcP}>
-					Car Rent Ukraine - ваш надійний партнер у прокаті авто.
-				</p>
+				<h4 className={css.forIcH4}>
+					{t('description.part1.about.opDeTitleOne')}
+				</h4>
+				<p className={css.forIcP}>{t('description.part1.about.opDeDescOne')}</p>
 			</div>
 			<div className={css.oneOfListWrap}>
 				<BiHappyBeaming className={css.iconCupSt} />
-				<h4 className={css.forIcH4}>1000+ Задоволених клієнтів</h4>
-				<p className={css.forIcP}>
-					Car Rent Ukraine - найкращий сервіс за помірну ціну
-				</p>
+				<h4 className={css.forIcH4}>
+					{t('description.part1.about.opDeTitleTwo')}
+				</h4>
+				<p className={css.forIcP}>{t('description.part1.about.opDeDescTwo')}</p>
 			</div>
 			<div className={css.oneOfListWrap}>
 				<AiFillSignal className={css.iconCupSt} />
-				<h4 className={css.forIcH4}>Чудова продуктивність</h4>
+				<h4 className={css.forIcH4}>
+					{t('description.part1.about.opDeTitleThre')}
+				</h4>
 				<p className={css.forIcP}>
-					З нами Ви отримаєте авто яке максимально підійде Вашим очіуцванням
+					{t('description.part1.about.opDeDescThre')}
 				</p>
 			</div>
 		</section>

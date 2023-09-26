@@ -204,7 +204,8 @@
 	justify-content: space-between;
 }
 .styleP {
-	font-family: 'Work Sans', Arial, Tahoma;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-weight: 400;
 	color: white;
 	font-size: 30px;
 }
@@ -216,7 +217,7 @@
 	border: 0;
 	color: white;
 	font-size: 25px;
-	font-family: 'Work Sans', Arial, Tahoma;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	cursor: pointer;
 	z-index: 20;
 	margin-top: 20px;
@@ -378,6 +379,7 @@
 	.styleP {
 		font-family: 'Work Sans', Arial, Tahoma;
 		color: white;
+		font-weight: bolder;
 		font-size: 20px;
 	}
 	.titleButton {

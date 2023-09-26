@@ -5,19 +5,21 @@ import Advantages from './advantages';
 import BlockDesc from './blockDesc';
 import ContactLabel from './contactLabel';
 import HowRent from './howRent';
+import { useTranslation, Trans } from 'react-i18next';
 import css from './services.module.css';
 export default function Services() {
+	const { t, i18n } = useTranslation();
 	keyWord(
-		'Послуги з Оренди Авто в Львові | Широкий Вибір та Зручні Умови',
-		'Дізнайтеся більше про послуги з оренди авто в Львові. Наша компанія пропонує різні моделі та класи автомобілів та зручні умови для вашої подорожі.',
+		`${t('description.seo.services.title')}`,
+		`${t('description.seo.services.description')}`,
 	);
 	return (
 		<section>
 			<HeaderAll />
-			<ContactLabel />
-			<BlockDesc />
-			<Advantages />
-			<HowRent />
+			<ContactLabel t={t} />
+			<BlockDesc t={t} />
+			<Advantages t={t} />
+			<HowRent t={t} />
 			<Footer />
 		</section>
 	);

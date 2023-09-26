@@ -8,7 +8,9 @@ import SendOrder from '../category/sendOrder';
 import Questions from './questions';
 import Description from './description';
 import keyWord from '../../../function/keyWord';
+import { useTranslation, Trans } from 'react-i18next';
 const Auto = ({ data }) => {
+	const { t, i18n } = useTranslation();
 	const [oneProd, setOneProd] = useState();
 	const [haveProd, setHaveProd] = useState(false);
 	const [sendMessage, setSendMessage] = useState(false);
@@ -47,8 +49,12 @@ const Auto = ({ data }) => {
 	};
 	if (haveProd) {
 		keyWord(
-			`Найкраща пропозиція: оренда ${oneProd.autoName} у Львові Car Rent Ukraine`,
-			`Орендуйте ${oneProd.autoName} в Львові від Car Rent Ukraine за доступною ціною. Забронюйте ${oneProd.autoName} прямо зараз та отримайте найкращу пропозицію.`,
+			`${t('description.seo.auto.titleFirst')} ${oneProd.autoName} ${t(
+				'description.seo.auto.titleSecond',
+			)}`,
+			`${t('description.seo.auto.descriptionFirst')} ${oneProd.autoName} ${t(
+				'description.seo.auto.descriptionSecond',
+			)} ${oneProd.autoName} ${t('description.seo.auto.descriptionThre')}`,
 		);
 	}
 
@@ -63,40 +69,64 @@ const Auto = ({ data }) => {
 						</div>
 						<div className={css.wrapInformation}>
 							<h1 className={css.titleAutoH1}>
-								Оренда&nbsp;{oneProd.autoName}&nbsp; у Львові
+								{t('description.part1.auto.firstTitle')}&nbsp;{oneProd.autoName}
+								&nbsp; {t('description.part1.auto.secondTitle')}
 							</h1>
-							<p className={css.rentZa}>Вартість застави&nbsp; {rentPay}грн</p>
+							<p className={css.rentZa}>
+								{t('description.part1.auto.rentPay')}&nbsp; {rentPay}
+								{t('description.part1.auto.curency')}
+							</p>
 							<p className={css.rentManual}>
-								Тип трансмісії&nbsp; {oneProd.manual}
+								{t('description.part1.auto.typManual')}&nbsp; {oneProd.manual}
 							</p>
 							<div className={css.priceInProdWrap}>
 								<div className={css.smallWrapPrice}>
-									<p className={css.price}>{firstPrice}грн</p>
-									<p className={css.data}>1-2діб</p>
+									<p className={css.price}>
+										{firstPrice}
+										{t('description.part1.auto.curency')}
+									</p>
+									<p className={css.data}>
+										1-2{t('description.part1.auto.dib')}
+									</p>
 								</div>
 								<div className={css.smallWrapPriceSec}>
-									<p className={css.price}>{secondPrice}грн</p>
-									<p className={css.data}>3-7діб</p>
+									<p className={css.price}>
+										{secondPrice}
+										{t('description.part1.auto.curency')}
+									</p>
+									<p className={css.data}>
+										3-7{t('description.part1.auto.dib')}
+									</p>
 								</div>
 								<div className={css.smallWrapPrice}>
-									<p className={css.price}>{threePrice}грн</p>
-									<p className={css.data}>8+діб</p>
+									<p className={css.price}>
+										{threePrice}
+										{t('description.part1.auto.curency')}
+									</p>
+									<p className={css.data}>
+										8+{t('description.part1.auto.dib')}
+									</p>
 								</div>
 								<div className={css.smallWrapPriceSec}>
-									<p className={css.price}>{fourPrice}грн</p>
-									<p className={css.data}>30+діб</p>
+									<p className={css.price}>
+										{fourPrice}
+										{t('description.part1.auto.curency')}
+									</p>
+									<p className={css.data}>
+										30+{t('description.part1.auto.dib')}
+									</p>
 								</div>
 							</div>
 							<button onClick={openMessage} className={css.sendAnyMess}>
-								Замовити автомобіль
+								{t('description.part1.auto.buttonRent')}
 							</button>
 						</div>
 					</div>
 				</div>
 			)}
 			{sendMessage && <SendOrder setSendMessage={setSendMessage} />}
-			{haveProd && <Questions oneProd={oneProd} />}
-			{haveProd && <Description oneProd={oneProd} />}
+			{haveProd && <Questions oneProd={oneProd} t={t} />}
+			{haveProd && <Description oneProd={oneProd} t={t} />}
 			<Footer />
 		</>
 	);

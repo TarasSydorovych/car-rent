@@ -7,7 +7,6 @@ export default function AboutUs({ t }) {
 		<div className={css.aboutUsWrap}>
 			<div className={css.aboutUsSmallWrap}>
 				<h3 className={css.aboutUsH3}>
-					{' '}
 					{t('description.part1.aboutBlock.abou')}
 				</h3>
 				<p className={css.aboutUsP}>{t('description.part1.aboutBlock.desc')}</p>
@@ -33,7 +32,6 @@ export default function AboutUs({ t }) {
 						<div className={css.firstPWrap}>
 							<IoMdCheckmarkCircleOutline className={css.styleP} />
 							<p className={css.styleP}>
-								{' '}
 								{t('description.part1.aboutBlock.desThre')}
 							</p>
 						</div>

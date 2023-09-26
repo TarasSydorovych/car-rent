@@ -1,32 +1,37 @@
 import css from './services.module.css';
 import firstPic from '../../../img/rul2.webp';
 import secondPic from '../../../img/rulles.webp';
-export default function HowRent() {
+export default function HowRent({ t }) {
 	return (
 		<section className={css.howRentWrap}>
 			<img src={firstPic} className={css.firstPicI} />
 			<div className={css.howToRent}>
-				<h3 className={css.topH3}>Як отримати авто в прокат</h3>
+				<h3 className={css.topH3}>
+					{t('description.part1.services.howRentOne')}
+				</h3>
 				<p className={css.listP}>
-					<span className={css.listPSpan}>Заповніть заявку:&nbsp;</span>
-					зверніться до нашої команди та заповніть заявку на нашому веб-сайті.
-				</p>
-				<p className={css.listP}>
-					<span className={css.listPSpan}>Оберіть авто:&nbsp;</span>
-					виберіть автомобіль з нашого асортименту, який вам підходить за типом
-					і бюджетом.
+					<span className={css.listPSpan}>
+						{t('description.part1.services.howRentOneTit')}&nbsp;
+					</span>
+					{t('description.part1.services.howRentOneDesc')}
 				</p>
 				<p className={css.listP}>
 					<span className={css.listPSpan}>
-						Підготуйте необхідні документи:&nbsp;
+						{t('description.part1.services.howRentTwoTit')}&nbsp;
 					</span>
-					для оформлення договору прокату вам знадобляться документи водія та
-					інші необхідні документи.
+					{t('description.part1.services.howRentTwoDesc')}
 				</p>
 				<p className={css.listP}>
-					<span className={css.listPSpan}>Заберіть авто:&nbsp;</span>
-					приходьте до нас, щоб отримати ключі від вашого автомобіля і почати
-					подорож.
+					<span className={css.listPSpan}>
+						{t('description.part1.services.howRentThreTit')}&nbsp;
+					</span>
+					{t('description.part1.services.howRentThreDesc')}
+				</p>
+				<p className={css.listP}>
+					<span className={css.listPSpan}>
+						{t('description.part1.services.howRentFourTit')}&nbsp;
+					</span>
+					{t('description.part1.services.howRentFourDesc')}
 				</p>
 			</div>
 			<img src={secondPic} className={css.firstPicI} />

@@ -10,6 +10,7 @@ import Category from './components/ua/category/category';
 import AdmUkr from './components/adm/admUkr/admUkr';
 import Auto from './components/ua/auto/auto';
 import { useState, useEffect } from 'react';
+import AddBooks from './components/adm/admUkr/photoEditor';
 
 function App() {
 	const [windowDimensions, setWindowDimensions] = useState(false);
@@ -37,6 +38,7 @@ function App() {
 				<Route path='/services' element={<Services />} />
 				<Route path='/category' element={<Category />} />
 				<Route path='/adm' element={<AdmUkr />} />
+				<Route path='/admAdd' element={<AddBooks />} />
 				<Route path='/auto/:id' element={<Auto />} />
 			</Routes>
 		</div>
