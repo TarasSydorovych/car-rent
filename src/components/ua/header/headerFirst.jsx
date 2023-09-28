@@ -37,8 +37,8 @@ export default function HeaderFirst() {
 						</Link>
 					</p>
 
-					<a href='tel:+380939393921' className={css.headerFirstPLink}>
-						+380939393921
+					<a href='tel:+380984549929' className={css.headerFirstPLink}>
+						+380984549929
 					</a>
 				</div>
 			</div>

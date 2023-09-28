@@ -11,9 +11,16 @@ import AdmUkr from './components/adm/admUkr/admUkr';
 import Auto from './components/ua/auto/auto';
 import { useState, useEffect } from 'react';
 import AddBooks from './components/adm/admUkr/photoEditor';
-
+import Cabinet from './components/adm/admUkr/cabinet';
+import { useLocation } from 'react-router-dom';
+import PhotoGallery from './components/adm/admUkr/test';
 function App() {
 	const [windowDimensions, setWindowDimensions] = useState(false);
+	const location = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location]);
 	useEffect(() => {
 		function handleResize() {
 			if (window.innerWidth < 1100) {
@@ -34,9 +41,11 @@ function App() {
 					element={<MainPage windowDimensions={windowDimensions} />}
 				/>
 				<Route path='/contact' element={<Contact />} />
+				<Route path='/test' element={<PhotoGallery />} />
 				<Route path='/about' element={<AboutUs />} />
 				<Route path='/services' element={<Services />} />
 				<Route path='/category' element={<Category />} />
+				<Route path='/cabinet' element={<Cabinet />} />
 				<Route path='/adm' element={<AdmUkr />} />
 				<Route path='/admAdd' element={<AddBooks />} />
 				<Route path='/auto/:id' element={<Auto />} />

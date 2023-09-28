@@ -48,7 +48,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	margin-top: 15px;
-	margin-left: 20px;
+	margin-left: 0;
 }
 .footerNavLi:hover {
 	color: var(--standart-color);
@@ -92,7 +92,7 @@
 		cursor: pointer;
 		text-decoration: none;
 		margin-top: 15px;
-		margin-left: 20px;
+		margin-left: 0;
 	}
 }
 @media only screen and (max-width: 700px) and (min-width: 479px) {
@@ -123,7 +123,7 @@
 		cursor: pointer;
 		text-decoration: none;
 		margin-top: 15px;
-		margin-left: 20px;
+		margin-left: 0;
 	}
 }
 @media only screen and (max-width: 1288px) and (min-width: 1024px) {
@@ -156,6 +156,6 @@
 		cursor: pointer;
 		text-decoration: none;
 		margin-top: 15px;
-		margin-left: 20px;
+		margin-left: 0;
 	}
 }

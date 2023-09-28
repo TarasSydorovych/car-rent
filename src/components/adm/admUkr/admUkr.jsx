@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import css from './cabiner.module.css';
 import {
 	getStorage,
 	ref,
@@ -283,12 +284,13 @@ export default function AdmUkr() {
 
 	const renderInputs = () => {
 		return objList.map((obj) => (
-			<div key={obj.transliter}>
+			<div key={obj.transliter} className={css.wrpNewItem}>
 				<label>{obj.name}</label>
 				<input
 					type='text'
 					name={obj.transliter}
 					onChange={handleInputChange}
+					className={css.inpAddAuto}
 					value={formData[obj.transliter] || ''}
 				/>
 			</div>
@@ -310,16 +312,16 @@ export default function AdmUkr() {
 	};
 
 	return (
-		<div>
-			<h2>Add Books</h2>
-			<form onSubmit={handleFormSubmit}>
+		<div className={css.addAutoWrap}>
+			<h2>Додати авто</h2>
+			<form onSubmit={handleFormSubmit} className={css.wrapAddAutoForm}>
 				{renderInputs()}
 				{renderPhotoInputs()}
 
 				<button type='button' onClick={addPhotoInput}>
-					Add Photo Input
+					Додати ще фото
 				</button>
-				<button type='submit'>Submit</button>
+				<button type='submit'>Записати</button>
 			</form>
 		</div>
 	);

@@ -63,7 +63,7 @@ i18n
 								about: 'About Us',
 								inf: 'Contact',
 								phone: 'Phone',
-								adress: 'Address: Lviv, Lychakivska Street, 1A',
+								adress: 'Address: Lviv, Chornovola Avenue 59',
 							},
 							contact: {
 								title: 'CONTACT US',
@@ -76,7 +76,7 @@ i18n
 								beInContact: 'STAY IN TOUCH WITH US',
 								ourInfo: 'Our contact information',
 								adressFir: 'Address',
-								adressTwo: 'Lviv, str. Lychakivsk, 1A',
+								adressTwo: 'Lviv, Chornovola Avenue 59',
 								tel: 'Phone',
 							},
 							category: {
@@ -323,7 +323,7 @@ i18n
 								about: 'Про нас',
 								inf: 'Контакти',
 								phone: 'Телефон',
-								adress: 'Адрес: Львів, вул. Личаківська, 1А',
+								adress: 'Адрес: Львів, Проспект Чорновола 59',
 							},
 							contact: {
 								title: "ЗВ'ЯЖІТЬСЯ З НАМИ",
@@ -336,7 +336,7 @@ i18n
 								beInContact: "ЗАЛИШАЙТЕСЯ З НАМИ НА ЗВ'ЯЗКУ",
 								ourInfo: 'Наша контактна інформація',
 								adressFir: 'Адреса',
-								adressTwo: 'Львів, вул. Личаківськ, 1А',
+								adressTwo: 'Львів, Проспект Чорновола 59',
 								tel: 'Телефон',
 							},
 							category: {

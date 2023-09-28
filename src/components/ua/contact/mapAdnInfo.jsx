@@ -29,10 +29,13 @@ export default function MapAdnInfo({ t }) {
 							<AiOutlinePhone className={css.iconFirst} />
 							<div className={css.informWrapTextSm}>
 								<h4 className={css.titleAdr}>
-									{' '}
 									{t('description.part1.contact.tel')}
 								</h4>
-								<p className={css.titleP}>+380939994499</p>
+								<p className={css.titleP}>
+									<a href='tel:+380984549929' className={css.titleP}>
+										+380984549929
+									</a>
+								</p>
 							</div>
 						</div>
 						<div className={css.informWrapText}>

@@ -225,6 +225,7 @@
 	justify-content: center;
 	align-items: center;
 	text-decoration: none;
+	flex-shrink: 0;
 }
 .titleButton::before {
 	content: '';

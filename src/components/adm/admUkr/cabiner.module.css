@@ -1,0 +1,90 @@
+.wrapButtonIn {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.buttonLog {
+	width: 200px;
+	height: 60px;
+	border: none;
+	border-radius: 5px;
+	font-family: 'Work Sans', Arial, Tahoma;
+	color: white;
+	font-size: 20px;
+	background: #27ba7a;
+}
+.listCorrect {
+	width: 100%;
+	height: auto;
+	margin-top: 50px;
+}
+.ulList {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	list-style-type: none;
+}
+.liList {
+	font-family: 'Work Sans', Arial, Tahoma;
+	font-size: 25px;
+	cursor: pointer;
+	margin: 0;
+}
+.wrapCha {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.addAutoWrap {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.wrapAddAutoForm {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+.wrpNewItem {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.inpAddAuto {
+	width: 60%;
+}
+.wrapPicList {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.ulWrapPic {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+}
+.liWrapPic {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.imgInWr {
+	width: 300px;
+	height: auto;
+}

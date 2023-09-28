@@ -173,9 +173,10 @@
 	font-size: 20px;
 	color: rgb(95, 95, 95);
 	font-weight: bolder;
+	text-decoration: none;
 }
 .pictureFon {
-	background: url(../../../img/maps.jpeg);
+	background: url(../../../img/maps.webp);
 	background-position: center;
 	border-radius: 10px 0 0 10px;
 	background-size: cover;

@@ -7,6 +7,8 @@ import withFirebaseCollection from '../../HOK/withFirebaseCollection';
 import SendOrder from '../category/sendOrder';
 import Questions from './questions';
 import Description from './description';
+import { PhotoProvider, PhotoSlider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 import keyWord from '../../../function/keyWord';
 import { useTranslation, Trans } from 'react-i18next';
 const Auto = ({ data }) => {
@@ -65,7 +67,30 @@ const Auto = ({ data }) => {
 				<div className={css.fullProductWrap}>
 					<div className={css.smallWrapForAuto}>
 						<div className={css.wrapAuto}>
-							<img className={css.picInProd} src={oneProd.imageList[0]} />
+							<PhotoProvider
+								speed={() => 800}
+								easing={(type) =>
+									type === 2
+										? 'cubic-bezier(0.36, 0, 0.66, -0.56)'
+										: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+								}
+								toolbarRender={({ rotate, onRotate }) => {
+									return (
+										<svg
+											className='PhotoView-Slider__toolbarIcon'
+											onClick={() => onRotate(rotate + 90)}
+										/>
+									);
+								}}
+							>
+								{oneProd.imageList.map((item, index) => (
+									<PhotoView key={index} src={item}>
+										{index < 1 ? (
+											<img src={item} alt='' className={css.picInProd} />
+										) : undefined}
+									</PhotoView>
+								))}
+							</PhotoProvider>
 						</div>
 						<div className={css.wrapInformation}>
 							<h1 className={css.titleAutoH1}>
