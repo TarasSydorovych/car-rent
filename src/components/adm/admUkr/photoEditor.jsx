@@ -40,6 +40,7 @@ const ProductList = () => {
 		await updateDoc(productRef, {
 			imageList: updatedImageList,
 		});
+		window.location.reload();
 	};
 	// Функція для оновлення фото товару
 	const handleUpdateImage = async (product, imageIndex) => {
@@ -59,6 +60,7 @@ const ProductList = () => {
 
 			// Скинути значення newImage
 			setNewImage(null);
+			window.location.reload();
 		}
 	};
 
@@ -80,6 +82,7 @@ const ProductList = () => {
 
 			// Очистити поле вводу нової фотографії після додавання
 			setNewImage(null);
+			window.location.reload();
 		}
 	};
 	const viewClick = (product, uid) => {

@@ -46,8 +46,6 @@ function App() {
 				<Route path='/services' element={<Services />} />
 				<Route path='/category' element={<Category />} />
 				<Route path='/cabinet' element={<Cabinet />} />
-				<Route path='/adm' element={<AdmUkr />} />
-				<Route path='/admAdd' element={<AddBooks />} />
 				<Route path='/auto/:id' element={<Auto />} />
 			</Routes>
 		</div>

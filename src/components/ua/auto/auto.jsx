@@ -66,7 +66,14 @@ const Auto = ({ data }) => {
 			{haveProd && (
 				<div className={css.fullProductWrap}>
 					<div className={css.smallWrapForAuto}>
-						<div className={css.wrapAuto}>
+						<div className={css.wrNew}>
+							<div className={css.wrapAuto}>
+								<img
+									src={oneProd.imageList[0]}
+									alt=''
+									className={css.picInProd}
+								/>
+							</div>
 							<PhotoProvider
 								speed={() => 800}
 								easing={(type) =>
@@ -83,13 +90,15 @@ const Auto = ({ data }) => {
 									);
 								}}
 							>
-								{oneProd.imageList.map((item, index) => (
-									<PhotoView key={index} src={item}>
-										{index < 1 ? (
-											<img src={item} alt='' className={css.picInProd} />
-										) : undefined}
-									</PhotoView>
-								))}
+								<div className={css.allFotoWrap}>
+									{oneProd.imageList.map((item, index) => (
+										<PhotoView key={index} src={item}>
+											<div className={css.fotoWr}>
+												<img src={item} alt='' className={css.picInProdAll} />
+											</div>
+										</PhotoView>
+									))}
+								</div>
 							</PhotoProvider>
 						</div>
 						<div className={css.wrapInformation}>
