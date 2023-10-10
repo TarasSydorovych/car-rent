@@ -50,7 +50,6 @@ export default function Cabinet() {
 			} else {
 				// Користувач вийшов, робіть необхідні дії
 				setAdminIn(false);
-				navigate('/');
 			}
 		});
 
@@ -67,7 +66,6 @@ export default function Cabinet() {
 				} else {
 					navigate('/');
 				}
-				console.log(result);
 			})
 			.catch((err) => {
 				console.log('Error');
@@ -135,6 +133,7 @@ export default function Cabinet() {
 					</ul>
 				</div>
 			)}
+
 			<div className={css.wrapCha}>
 				{addAuto && <AdmUkr />}
 				{changeFoto && <ProductList />}

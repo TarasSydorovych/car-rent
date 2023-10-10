@@ -9,11 +9,12 @@ import ProductList from './productList';
 import SendOrder from './sendOrder';
 import { useTranslation, Trans } from 'react-i18next';
 import keyWord from '../../../function/keyWord';
-const Category = ({ data }) => {
+const Category = ({ data, val }) => {
 	const { t, i18n } = useTranslation();
 	const [category, setCategory] = useState('');
 	const [pidCategory, setPidCategory] = useState('');
 	const [sendMessage, setSendMessage] = useState(false);
+	const [selectedOption, setSelectedOption] = useState(1);
 	keyWord(
 		`${t('description.seo.category.title')}`,
 		`${t('description.seo.category.description')}`,
@@ -27,13 +28,21 @@ const Category = ({ data }) => {
 				setCategory={setCategory}
 				setPidCategory={setPidCategory}
 				t={t}
+				setSelectedOption={setSelectedOption}
 			/>
-			<ProductList
-				setSendMessage={setSendMessage}
-				category={category}
-				pidCategory={pidCategory}
-				t={t}
-			/>
+			{val.length > 0 && (
+				<ProductList
+					val={val}
+					setSendMessage={setSendMessage}
+					category={category}
+					pidCategory={pidCategory}
+					t={t}
+					setSelectedOption={setSelectedOption}
+					selectedOption={selectedOption}
+					setCategory={setCategory}
+					setPidCategory={setPidCategory}
+				/>
+			)}
 			{sendMessage && <SendOrder setSendMessage={setSendMessage} />}
 			<Footer />
 		</>

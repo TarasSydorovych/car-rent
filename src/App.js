@@ -14,7 +14,8 @@ import AddBooks from './components/adm/admUkr/photoEditor';
 import Cabinet from './components/adm/admUkr/cabinet';
 import { useLocation } from 'react-router-dom';
 import PhotoGallery from './components/adm/admUkr/test';
-function App() {
+import withFirebaseCollection from './components/HOK/withFirebaseCollection';
+const App = ({ data }) => {
 	const [windowDimensions, setWindowDimensions] = useState(false);
 	const location = useLocation();
 
@@ -33,6 +34,7 @@ function App() {
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
+
 	return (
 		<div>
 			<Routes>
@@ -44,12 +46,12 @@ function App() {
 				<Route path='/test' element={<PhotoGallery />} />
 				<Route path='/about' element={<AboutUs />} />
 				<Route path='/services' element={<Services />} />
-				<Route path='/category' element={<Category />} />
+				<Route path='/category' element={<Category val={data} />} />
 				<Route path='/cabinet' element={<Cabinet />} />
-				<Route path='/auto/:id' element={<Auto />} />
+				<Route path='/auto/:id' element={<Auto val={data} />} />
 			</Routes>
 		</div>
 	);
-}
+};
 
-export default App;
+export default withFirebaseCollection('value')(App);

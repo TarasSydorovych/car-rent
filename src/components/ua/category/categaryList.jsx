@@ -1,13 +1,22 @@
 import withFirebaseCollection from '../../HOK/withFirebaseCollection';
 import css from './category.module.css';
-const CategoryList = ({ dataCat, data, setCategory, setPidCategory, t }) => {
+const CategoryList = ({
+	dataCat,
+	data,
+	setCategory,
+	setPidCategory,
+	t,
+	setSelectedOption,
+}) => {
 	const changeCategory = (name) => {
 		setCategory(name);
 		setPidCategory('');
+		setSelectedOption(1);
 	};
 	const changePidCategory = (name) => {
 		setPidCategory(name);
 		setCategory('');
+		setSelectedOption(1);
 	};
 	return (
 		<section className={css.sectionWrap}>

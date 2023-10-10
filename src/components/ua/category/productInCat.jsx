@@ -2,7 +2,7 @@ import css from './category.module.css';
 import foto from '../../../img/toyota.jpeg';
 import { useEffect, useState } from 'react';
 import { useParams, useLocation, Link } from 'react-router-dom';
-export default function ProductInCat({ el, setSendMessage, t }) {
+export default function ProductInCat({ el, setSendMessage, t, val }) {
 	const location = useLocation();
 	const [firstPrice, setFirstPrice] = useState();
 	const [secondPrice, setSecondPrice] = useState();
@@ -15,20 +15,40 @@ export default function ProductInCat({ el, setSendMessage, t }) {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [location]);
+	// useEffect(() => {
+	// 	console.log('el.fourPrice', el.fourPrice, el.autoName);
+	// 	const numberOne = parseFloat(el.firstPrice) * 40;
+	// 	const numberTwo = parseFloat(el.secondPrice) * 40;
+	// 	const numberThree = parseFloat(el.threePrice) * 40;
+	// 	const numberFour = parseFloat(el.fourPrice) * 40;
+	// 	console.log('numberFour', numberFour);
+	// 	const roundedNumberOne = Math.round(numberOne);
+	// 	const roundedNumberTwo = Math.round(numberTwo);
+	// 	const roundedNumberThree = Math.round(numberThree);
+	// 	const roundedNumberFour = Math.round(numberFour);
+	// 	setFirstPrice(roundedNumberOne);
+	// 	setSecondPrice(roundedNumberTwo);
+	// 	setThreePrice(roundedNumberThree);
+	// 	setFourPrice(roundedNumberFour);
+	// }, []);
 	useEffect(() => {
-		const numberOne = parseFloat(el.firstPrice) * 40;
-		const numberTwo = parseFloat(el.secondPrice) * 40;
-		const numberThree = parseFloat(el.threePrice) * 40;
-		const numberFour = parseFloat(el.fourPrice) * 40;
-		const roundedNumberOne = Math.round(numberOne);
-		const roundedNumberTwo = Math.round(numberTwo);
-		const roundedNumberThree = Math.round(numberThree);
-		const roundedNumberFour = Math.round(numberFour);
+		const cur = parseFloat(val[0].val);
+
+		const numberOne = parseFloat(el.firstPrice);
+		const numberTwo = parseFloat(el.secondPrice);
+		const numberThree = parseFloat(el.threePrice);
+		const numberFour = parseFloat(el.fourPrice);
+
+		const roundedNumberOne = Math.round(numberOne * cur);
+		const roundedNumberTwo = Math.round(numberTwo * cur);
+		const roundedNumberThree = Math.round(numberThree * cur);
+		const roundedNumberFour = Math.round(numberFour * cur);
+
 		setFirstPrice(roundedNumberOne);
 		setSecondPrice(roundedNumberTwo);
 		setThreePrice(roundedNumberThree);
 		setFourPrice(roundedNumberFour);
-	}, []);
+	}, [el]);
 	useEffect(() => {
 		if (el.manual === 'Автомат') {
 			setCorobka(`${t('description.part1.category.automat')}`);

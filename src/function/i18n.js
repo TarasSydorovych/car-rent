@@ -92,6 +92,8 @@ i18n
 								uah: 'UAH',
 								dib: 'days',
 								button: 'Order a car',
+								option: 'Filter cars by price',
+								to: 'to',
 							},
 							services: {
 								title: 'Our Services',
@@ -352,6 +354,8 @@ i18n
 								uah: 'грн',
 								dib: 'діб',
 								button: 'Замовити авто',
+								option: 'Фільтрувати авто по вартості',
+								to: 'до',
 							},
 							services: {
 								title: 'Наші послуги',
