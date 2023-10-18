@@ -124,7 +124,7 @@ const Auto = ({ data, val }) => {
 											{t('description.part1.auto.curency')}
 										</p>
 										<p className={css.data}>
-											1-2{t('description.part1.auto.dib')}
+											1-2{t('description.part1.auto.doba')}
 										</p>
 									</div>
 									<div className={css.smallWrapPriceSec}>

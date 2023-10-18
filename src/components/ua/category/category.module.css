@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 :root {
 	--standart-color: #27ba7a;
 	--secondary-color: #6c757d;
@@ -41,12 +42,21 @@
 	justify-content: space-around;
 	flex-wrap: wrap;
 	list-style-type: none;
+	padding: 0;
 }
 .ulListLi {
 	font-family: var(--custom-font);
 	font-size: 30px;
 	font-weight: bolder;
 	cursor: pointer;
+	width: 300px;
+	height: 50px;
+	border: 1px solid var(--standart-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+	border-radius: 5px;
 }
 .ulListLi:hover {
 	color: var(--standart-color);
@@ -115,6 +125,7 @@
 	font-family: var(--custom-font);
 	font-weight: bolder;
 	font-size: 15px;
+	width: 60px;
 }
 .priceListLiBack {
 	width: 100%;
@@ -214,17 +225,21 @@
 	cursor: pointer;
 }
 .customSelect {
-	align-self: flex-start;
-	margin-left: 100px;
+	align-self: center;
+
 	width: 300px;
 	height: 60px;
 	border: 1px solid var(--standart-color);
 	color: black;
 	font-weight: bolder;
-	font-size: 17px;
+	font-size: 18px;
 	font-family: var(--custom-font);
+	border-radius: 5px;
 }
 @media only screen and (max-width: 600px) and (min-width: 300px) {
+	.ulListCategory {
+		padding: 0;
+	}
 	.categoryListWrap {
 		width: 98%;
 		height: auto;
@@ -234,14 +249,122 @@
 	}
 	.ulListLi {
 		font-family: var(--custom-font);
-		font-size: 20px;
+		font-size: 25px;
 		font-weight: bolder;
 		cursor: pointer;
+		width: 300px;
+		height: 40px;
+		border: 1px solid var(--standart-color);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+		border-radius: 5px;
+	}
+
+	.customSelect {
+		align-self: center;
+		margin-left: 0px;
+		width: 300px;
+		height: 60px;
+		border: 1px solid var(--standart-color);
+		color: black;
+		font-weight: bolder;
+		font-size: 17px;
+		font-family: var(--custom-font);
+		border-radius: 5px;
 	}
 }
 @media only screen and (max-width: 700px) and (min-width: 479px) {
+	.ulListCategory {
+		padding: 0;
+	}
+	.ulListLi {
+		font-family: var(--custom-font);
+		font-size: 25px;
+		font-weight: bolder;
+		cursor: pointer;
+		width: 300px;
+		height: 40px;
+		border: 1px solid var(--standart-color);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+		border-radius: 5px;
+	}
+
+	.customSelect {
+		align-self: center;
+		margin-left: 0px;
+		width: 300px;
+		height: 60px;
+		border: 1px solid var(--standart-color);
+		color: black;
+		font-weight: bolder;
+		font-size: 17px;
+		font-family: var(--custom-font);
+		border-radius: 5px;
+	}
 }
 @media only screen and (max-width: 1440px) and (min-width: 1024px) {
+	.ulListLi {
+		font-family: var(--custom-font);
+		font-size: 25px;
+		font-weight: bolder;
+		cursor: pointer;
+		width: 300px;
+		height: 50px;
+		border: 1px solid var(--standart-color);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+		border-radius: 5px;
+	}
+
+	.customSelect {
+		align-self: center;
+		margin-left: 0px;
+		width: 300px;
+		height: 60px;
+		border: 1px solid var(--standart-color);
+		color: black;
+		font-weight: bolder;
+		font-size: 17px;
+		font-family: var(--custom-font);
+		border-radius: 5px;
+	}
 }
 @media only screen and (max-width: 1024px) and (min-width: 701px) {
+	.ulListCategory {
+		padding: 0;
+	}
+	.ulListLi {
+		font-family: var(--custom-font);
+		font-size: 25px;
+		font-weight: bolder;
+		cursor: pointer;
+		width: 300px;
+		height: 40px;
+		border: 1px solid var(--standart-color);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+		border-radius: 5px;
+	}
+
+	.customSelect {
+		align-self: center;
+		margin-left: 0px;
+		width: 300px;
+		height: 60px;
+		border: 1px solid var(--standart-color);
+		color: black;
+		font-weight: bolder;
+		font-size: 17px;
+		font-family: var(--custom-font);
+		border-radius: 5px;
+	}
 }

@@ -6,7 +6,7 @@ export default function FirstBlock({ windowDimensions, t }) {
 	return (
 		<>
 			<Header windowDimensions={windowDimensions} />
-			<BlockPic t={t} />
+			<BlockPic t={t} windowDimensions={windowDimensions} />
 			<BlockInPic />
 		</>
 	);

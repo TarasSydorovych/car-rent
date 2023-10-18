@@ -72,7 +72,7 @@ export default function ProductInCat({ el, setSendMessage, t, val }) {
 						{t('description.part1.category.uah')}
 					</p>
 					<p className={css.listPSecond}>
-						1-2{t('description.part1.category.dib')}
+						1-2{t('description.part1.category.doba')}
 					</p>
 				</li>
 				<li className={css.priceListLiBack}>

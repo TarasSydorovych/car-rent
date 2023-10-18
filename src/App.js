@@ -15,6 +15,7 @@ import Cabinet from './components/adm/admUkr/cabinet';
 import { useLocation } from 'react-router-dom';
 import PhotoGallery from './components/adm/admUkr/test';
 import withFirebaseCollection from './components/HOK/withFirebaseCollection';
+import Chat from './components/chat/chat';
 const App = ({ data }) => {
 	const [windowDimensions, setWindowDimensions] = useState(false);
 	const location = useLocation();
@@ -42,14 +43,26 @@ const App = ({ data }) => {
 					path='/'
 					element={<MainPage windowDimensions={windowDimensions} />}
 				/>
+				<Route
+					path='/en'
+					element={<MainPage windowDimensions={windowDimensions} />}
+				/>
+				<Route
+					path='/ua'
+					element={<MainPage windowDimensions={windowDimensions} />}
+				/>
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/test' element={<PhotoGallery />} />
 				<Route path='/about' element={<AboutUs />} />
 				<Route path='/services' element={<Services />} />
-				<Route path='/category' element={<Category val={data} />} />
+				<Route
+					path='/category'
+					element={<Category val={data} windowDimensions={windowDimensions} />}
+				/>
 				<Route path='/cabinet' element={<Cabinet />} />
 				<Route path='/auto/:id' element={<Auto val={data} />} />
 			</Routes>
+			<Chat />
 		</div>
 	);
 };

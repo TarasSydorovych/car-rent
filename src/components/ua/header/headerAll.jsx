@@ -18,7 +18,7 @@ export default function HeaderAll() {
 	}, []);
 	return (
 		<header className={css.headerWrap}>
-			<HeaderFirst />
+			{windowDimensions && <HeaderFirst windowDimensions={windowDimensions} />}
 			<HeaderSecond windowDimensions={windowDimensions} />
 		</header>
 	);

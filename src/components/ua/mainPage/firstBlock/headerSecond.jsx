@@ -77,7 +77,7 @@ export default function HeaderSecond({ windowDimensions }) {
 						</div>
 						<Link className={css.logo} to='/'>
 							<h2 className={css.logo}>
-								Car<span className={css.logoSpan}>Rent</span>Ukraine
+								Rent<span className={css.logoSpan}>Auto</span>Ukraine
 							</h2>
 						</Link>
 					</div>
@@ -87,20 +87,25 @@ export default function HeaderSecond({ windowDimensions }) {
 				<>
 					<Link className={css.logo} to='/'>
 						<h2 className={css.logo}>
-							Car<span className={css.logoSpan}>Rent</span>Ukraine
+							Rent<span className={css.logoSpan}>Auto</span>Ukraine
 						</h2>
 					</Link>
 					<RxHamburgerMenu
 						onClick={openBurgerMenu}
 						className={css.rxHamburgerMenu}
 					/>
-					<div className={css.languageWrapP}>
-						<p onClick={cahangeUkr} className={css.languageP}>
-							UA
-						</p>
-						<p onClick={cahangeEn} className={css.languageP}>
-							EN
-						</p>
+					<div className={css.lanWrapWithNum}>
+						<div className={css.languageWrapP}>
+							<p onClick={cahangeUkr} className={css.languageP}>
+								UA
+							</p>
+							<p onClick={cahangeEn} className={css.languageP}>
+								EN
+							</p>
+						</div>
+						<a href='tel:+380984549929' className={css.headerFirstPLinkIn}>
+							+380984549929
+						</a>
 					</div>
 				</>
 			)}

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 :root {
 	--standart-color: #27ba7a;
 	--secondary-color: #6c757d;
@@ -7,7 +8,7 @@
 .contactLabelWrap {
 	width: 100%;
 	height: 384px;
-	background: url(../../../img/aboutTitle.jpeg) no-repeat #fff;
+	background: url(../../../img/aboutTitle.webp) no-repeat #fff;
 	background-size: cover;
 	display: flex;
 	align-items: center;

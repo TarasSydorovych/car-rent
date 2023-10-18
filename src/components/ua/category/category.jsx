@@ -9,7 +9,7 @@ import ProductList from './productList';
 import SendOrder from './sendOrder';
 import { useTranslation, Trans } from 'react-i18next';
 import keyWord from '../../../function/keyWord';
-const Category = ({ data, val }) => {
+const Category = ({ data, val, windowDimensions }) => {
 	const { t, i18n } = useTranslation();
 	const [category, setCategory] = useState('');
 	const [pidCategory, setPidCategory] = useState('');
@@ -22,7 +22,8 @@ const Category = ({ data, val }) => {
 	return (
 		<>
 			<HeaderAll />
-			<ContactLabel t={t} />
+			{windowDimensions && <ContactLabel t={t} />}
+
 			<CategoryList
 				dataCat={data}
 				setCategory={setCategory}

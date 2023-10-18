@@ -1,7 +1,8 @@
 import css from './aboutUs.module.css';
-import img1 from '../../../../img/auto1.jpeg';
+import img1 from '../../../../img/auto1.webp';
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 import { Link } from 'react-router-dom';
+import LazyImage from './lazyImage';
 export default function AboutUs({ t }) {
 	return (
 		<div className={css.aboutUsWrap}>
@@ -11,11 +12,7 @@ export default function AboutUs({ t }) {
 				</h3>
 				<p className={css.aboutUsP}>{t('description.part1.aboutBlock.desc')}</p>
 				<div className={css.picAndTextWr}>
-					<img
-						src={img1}
-						className={css.abouttPic}
-						alt='Про компанію CarRentUkraine'
-					/>
+					<LazyImage />
 					<div className={css.wrapPIn}>
 						<div className={css.firstPWrap}>
 							<IoMdCheckmarkCircleOutline className={css.styleP} />

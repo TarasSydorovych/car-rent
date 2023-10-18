@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 :root {
 	--standart-color: #27ba7a;
 	--secondary-color: #6c757d;
@@ -57,6 +58,12 @@
 	text-decoration: none;
 	margin-left: 15px;
 }
+.headerFirstPLinkIn {
+	color: white;
+	font-size: 15px;
+	text-decoration: none;
+	margin-left: 0;
+}
 /* Стилі для прозорого хедера */
 .transparentHeader {
 	background-color: transparent; /* Зробіть фон повністю прозорим */
@@ -88,13 +95,19 @@
 
 /* Стилі для секції героя та контенту */
 .hero {
-	background-image: url('../../../../img/slide1.webp');
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
 	width: 100%;
 	position: absolute;
 	top: 50px;
+}
+.fullPic {
+	object-fit: cover;
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
 }
 .blockPidPic {
 	height: 100vh;
@@ -128,6 +141,7 @@
 	opacity: 1;
 	color: white;
 	list-style-type: none;
+	padding: 0;
 }
 .listLi {
 	color: white;
@@ -213,7 +227,7 @@
 	position: relative;
 	width: 300px;
 	height: 50px;
-	background: none;
+
 	border: 0;
 	color: white;
 	font-size: 25px;
@@ -226,24 +240,9 @@
 	align-items: center;
 	text-decoration: none;
 	flex-shrink: 0;
-}
-.titleButton::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 35%;
-	height: 100%;
 	background: var(--standart-color);
-	z-index: -1;
-	color: white;
-	font-size: 25px;
-	font-family: 'Jost', sans-serif;
 }
-.titleButton:hover::before {
-	width: 100%;
-	transition: all 0.5s ease-in-out;
-}
+
 .languageWrapP {
 	display: flex;
 	align-items: center;
@@ -271,7 +270,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий фон (RGBA) */
+	background-color: rgba(0, 0, 0, 0.9); /* Напівпрозорий фон (RGBA) */
 	z-index: 9999;
 	display: flex;
 	flex-direction: column;
@@ -285,7 +284,36 @@
 	margin-right: 10px;
 	margin-top: 10px;
 }
+.lanWrapWithNum {
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
 @media only screen and (max-width: 600px) and (min-width: 300px) {
+	.locationWrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		height: auto;
+	}
+	.locationWrapIconMobile {
+		width: 150px;
+		height: 40px;
+		color: black;
+		font-family: var(--custom-font);
+		font-size: 18px;
+		font-weight: bolder;
+		border-radius: 5px;
+		margin-top: 10px;
+		cursor: pointer;
+		text-decoration: none;
+		background: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	.headerFirstWrap {
 		width: 100%;
 		height: auto;
@@ -319,13 +347,19 @@
 			transform 0.5s ease; /* Плавна анімація показу */
 	}
 	.hero {
-		background-image: url('../../../../img/slide1.webp');
 		background-size: cover;
 		background-position: center;
-		height: 100vh;
+		height: calc(100vh - 99px);
 		width: 100%;
 		position: absolute;
-		top: auto;
+		top: 0;
+	}
+	.fullPic {
+		object-fit: cover;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100vh;
 	}
 	.listStyle {
 		width: 80%;
@@ -337,6 +371,7 @@
 		opacity: 1;
 		color: white;
 		list-style-type: none;
+		padding: 0;
 	}
 	.listLi {
 		color: white;
@@ -348,16 +383,16 @@
 	}
 	.hWrap {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		justify-content: flex-start;
 		flex-direction: column;
-		height: 60%;
+		height: 30%;
 		width: 90%;
 	}
 	.topH1InFirst {
 		font-family: 'Work Sans', Arial, Tahoma;
 		font-size: 30px;
-		align-self: flex-start;
+		align-self: center;
 
 		color: #1a2126;
 		margin-bottom: 0;
@@ -373,25 +408,35 @@
 	}
 	.topH1InFirstSecond {
 		font-family: 'Work Sans', Arial, Tahoma;
-		color: white;
-		font-size: 25px;
+		color: #1a2126;
 		margin-bottom: 0;
+		text-shadow:
+			2px 0 0 #27ba7a,
+			-2px 0 0 #27ba7a,
+			0 2px 0 #27ba7a,
+			0 -2px 0 #27ba7a,
+			1px 1px #27ba7a,
+			-1px -1px 0 #27ba7a,
+			1px -1px 0 #27ba7a,
+			-1px 1px 0 #27ba7a;
+		font-size: 25px;
 	}
 	.styleP {
 		font-family: 'Work Sans', Arial, Tahoma;
 		color: white;
+		margin-left: 10px;
 		font-weight: bolder;
-		font-size: 20px;
+		font-size: 25px;
 	}
 	.titleButton {
 		position: relative;
-		width: 250px;
+		width: 300px;
 		height: 50px;
-		background: none;
+
 		border: 0;
 		color: white;
-		font-size: 20px;
-		font-family: 'Work Sans', Arial, Tahoma;
+		font-size: 25px;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 		cursor: pointer;
 		z-index: 20;
 		margin-top: 20px;
@@ -399,24 +444,10 @@
 		justify-content: center;
 		align-items: center;
 		text-decoration: none;
-	}
-	.titleButton::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 35%;
-		height: 100%;
+		flex-shrink: 0;
 		background: var(--standart-color);
-		z-index: -1;
-		color: white;
-		font-size: 25px;
-		font-family: 'Jost', sans-serif;
 	}
-	.titleButton:hover::before {
-		width: 100%;
-		transition: all 0.5s ease-in-out;
-	}
+
 	.logo {
 		font-family: 'Permanent Marker', cursive;
 		color: white;
@@ -463,6 +494,29 @@
 	}
 }
 @media only screen and (max-width: 700px) and (min-width: 479px) {
+	.locationWrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		height: auto;
+	}
+	.locationWrapIconMobile {
+		width: 150px;
+		height: 40px;
+		color: black;
+		font-family: var(--custom-font);
+		font-size: 18px;
+		font-weight: bolder;
+		border-radius: 5px;
+		margin-top: 10px;
+		cursor: pointer;
+		text-decoration: none;
+		background: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	.headerFirstWrap {
 		width: 100%;
 		height: auto;
@@ -496,13 +550,19 @@
 			transform 0.5s ease; /* Плавна анімація показу */
 	}
 	.hero {
-		background-image: url('../../../../img/slide1.webp');
 		background-size: cover;
 		background-position: center;
-		height: 100vh;
+		height: calc(100vh - 99px);
 		width: 100%;
 		position: absolute;
-		top: auto;
+		top: 0;
+	}
+	.fullPic {
+		object-fit: cover;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100vh;
 	}
 	.listStyle {
 		width: 80%;
@@ -525,16 +585,16 @@
 	}
 	.hWrap {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		justify-content: flex-start;
 		flex-direction: column;
-		height: 60%;
+		height: 40%;
 		width: 90%;
 	}
 	.topH1InFirst {
 		font-family: 'Work Sans', Arial, Tahoma;
-		font-size: 30px;
-		align-self: flex-start;
+		font-size: 35px;
+		align-self: center;
 
 		color: #1a2126;
 		margin-bottom: 0;
@@ -550,9 +610,18 @@
 	}
 	.topH1InFirstSecond {
 		font-family: 'Work Sans', Arial, Tahoma;
-		color: white;
-		font-size: 25px;
+		color: #1a2126;
 		margin-bottom: 0;
+		text-shadow:
+			2px 0 0 #27ba7a,
+			-2px 0 0 #27ba7a,
+			0 2px 0 #27ba7a,
+			0 -2px 0 #27ba7a,
+			1px 1px #27ba7a,
+			-1px -1px 0 #27ba7a,
+			1px -1px 0 #27ba7a,
+			-1px 1px 0 #27ba7a;
+		font-size: 25px;
 	}
 	.styleP {
 		font-family: 'Work Sans', Arial, Tahoma;
@@ -563,11 +632,11 @@
 		position: relative;
 		width: 250px;
 		height: 50px;
-		background: none;
+
 		border: 0;
 		color: white;
-		font-size: 20px;
-		font-family: 'Work Sans', Arial, Tahoma;
+		font-size: 25px;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 		cursor: pointer;
 		z-index: 20;
 		margin-top: 20px;
@@ -575,23 +644,8 @@
 		justify-content: center;
 		align-items: center;
 		text-decoration: none;
-	}
-	.titleButton::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 35%;
-		height: 100%;
+		flex-shrink: 0;
 		background: var(--standart-color);
-		z-index: -1;
-		color: white;
-		font-size: 25px;
-		font-family: 'Jost', sans-serif;
-	}
-	.titleButton:hover::before {
-		width: 100%;
-		transition: all 0.5s ease-in-out;
 	}
 	.logo {
 		font-family: 'Permanent Marker', cursive;
@@ -650,7 +704,58 @@
 		list-style-type: none;
 	}
 }
+@media only screen and (max-width: 1100px) and (min-width: 1024px) {
+	.locationWrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		height: auto;
+	}
+	.locationWrapIconMobile {
+		width: 150px;
+		height: 40px;
+		color: black;
+		font-family: var(--custom-font);
+		font-size: 18px;
+		font-weight: bolder;
+		border-radius: 5px;
+		margin-top: 10px;
+		cursor: pointer;
+		text-decoration: none;
+		background: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.hero {
+		top: 0;
+	}
+}
 @media only screen and (max-width: 1024px) and (min-width: 701px) {
+	.locationWrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		height: auto;
+	}
+	.locationWrapIconMobile {
+		width: 150px;
+		height: 40px;
+		color: black;
+		font-family: var(--custom-font);
+		font-size: 18px;
+		font-weight: bolder;
+		border-radius: 5px;
+		margin-top: 10px;
+		cursor: pointer;
+		text-decoration: none;
+		background: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	.headerFirstWrap {
 		width: 100%;
 		height: auto;
@@ -684,13 +789,19 @@
 			transform 0.5s ease; /* Плавна анімація показу */
 	}
 	.hero {
-		background-image: url('../../../../img/slide1.webp');
 		background-size: cover;
 		background-position: center;
-		height: 100vh;
+		height: calc(100vh - 99px);
 		width: 100%;
 		position: absolute;
-		top: auto;
+		top: 0;
+	}
+	.fullPic {
+		object-fit: cover;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100vh;
 	}
 	.listStyle {
 		width: 80%;
@@ -713,16 +824,16 @@
 	}
 	.hWrap {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		justify-content: flex-start;
 		flex-direction: column;
-		height: 60%;
+		height: 40%;
 		width: 90%;
 	}
 	.topH1InFirst {
 		font-family: 'Work Sans', Arial, Tahoma;
-		font-size: 30px;
-		align-self: flex-start;
+		font-size: 50px;
+		align-self: center;
 
 		color: #1a2126;
 		margin-bottom: 0;
@@ -738,9 +849,19 @@
 	}
 	.topH1InFirstSecond {
 		font-family: 'Work Sans', Arial, Tahoma;
-		color: white;
-		font-size: 25px;
+
+		font-size: 40px;
+		color: #1a2126;
 		margin-bottom: 0;
+		text-shadow:
+			2px 0 0 #27ba7a,
+			-2px 0 0 #27ba7a,
+			0 2px 0 #27ba7a,
+			0 -2px 0 #27ba7a,
+			1px 1px #27ba7a,
+			-1px -1px 0 #27ba7a,
+			1px -1px 0 #27ba7a,
+			-1px 1px 0 #27ba7a;
 	}
 	.styleP {
 		font-family: 'Work Sans', Arial, Tahoma;
@@ -751,11 +872,11 @@
 		position: relative;
 		width: 250px;
 		height: 50px;
-		background: none;
+
 		border: 0;
 		color: white;
-		font-size: 20px;
-		font-family: 'Work Sans', Arial, Tahoma;
+		font-size: 25px;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 		cursor: pointer;
 		z-index: 20;
 		margin-top: 20px;
@@ -763,23 +884,8 @@
 		justify-content: center;
 		align-items: center;
 		text-decoration: none;
-	}
-	.titleButton::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 35%;
-		height: 100%;
+		flex-shrink: 0;
 		background: var(--standart-color);
-		z-index: -1;
-		color: white;
-		font-size: 25px;
-		font-family: 'Jost', sans-serif;
-	}
-	.titleButton:hover::before {
-		width: 100%;
-		transition: all 0.5s ease-in-out;
 	}
 	.logo {
 		font-family: 'Permanent Marker', cursive;

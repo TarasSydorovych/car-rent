@@ -6,7 +6,8 @@ import HeaderSecond from './headerSecond';
 export default function Header({ windowDimensions }) {
 	return (
 		<header className={css.headerWrap}>
-			<HeaderFirst />
+			{windowDimensions && <HeaderFirst windowDimensions={windowDimensions} />}
+
 			<HeaderSecond windowDimensions={windowDimensions} />
 		</header>
 	);

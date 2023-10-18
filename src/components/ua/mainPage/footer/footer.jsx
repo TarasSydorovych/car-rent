@@ -7,7 +7,7 @@ export default function Footer() {
 		<footer className={css.mainFooter}>
 			<div className={css.theSameWrap}>
 				<h2 className={css.logo}>
-					Car<span className={css.logoSpan}>Rent</span>Ukraine
+					Rent<span className={css.logoSpan}>Auto</span>Ukraine
 				</h2>
 				<ul className={css.footerNavigation}>
 					<li className={css.footerNavLi}>

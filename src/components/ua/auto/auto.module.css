@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
 :root {
 	--standart-color: #27ba7a;
 	--secondary-color: #6c757d;
@@ -266,8 +268,38 @@
 	.theTextP {
 		font-size: 18px;
 	}
+	.wrNew {
+		width: 300px;
+		height: auto;
+
+		align-items: center;
+	}
+	.allFotoWrap {
+		width: 300px;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 20px;
+	}
 }
 @media only screen and (max-width: 700px) and (min-width: 479px) {
+	.wrNew {
+		width: 300px;
+		height: auto;
+
+		align-items: center;
+	}
+	.allFotoWrap {
+		width: 300px;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 20px;
+	}
 	.smallWrapForAuto {
 		width: 100%;
 		flex-direction: column;

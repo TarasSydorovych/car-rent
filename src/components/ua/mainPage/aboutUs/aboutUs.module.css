@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 :root {
 	--standart-color: #27ba7a;
 	--secondary-color: #6c757d;
@@ -98,7 +99,7 @@
 	.picAndTextWr {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		justify-content: space-around;
 		height: auto;
 		margin-top: 40px;
@@ -106,8 +107,8 @@
 	}
 	.abouttPic {
 		border-radius: 10px;
-		width: 95%;
-		height: auto;
+		width: 300px;
+		height: 229px;
 	}
 	.wrapPIn {
 		width: auto;
@@ -151,7 +152,7 @@
 	.abouttPic {
 		border-radius: 10px;
 		width: 400px;
-		height: auto;
+		height: 305px;
 		align-self: center;
 	}
 	.wrapPIn {
@@ -207,7 +208,7 @@
 	.abouttPic {
 		border-radius: 10px;
 		width: 400px;
-		height: auto;
+		height: 305px;
 		align-self: center;
 	}
 	.wrapPIn {

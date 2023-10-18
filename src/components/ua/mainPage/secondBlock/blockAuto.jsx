@@ -2,7 +2,7 @@ import css from './secondBlock.module.css';
 import imgPi from '../../../../img/auto.png';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-export default function BlockAuto({ el, t }) {
+export default function BlockAuto({ el, t, windowDimensions }) {
 	const [fullPrice, setFullPrice] = useState();
 	const [claasAutoM, setClaasAutoM] = useState('');
 	useEffect(() => {
@@ -23,22 +23,38 @@ export default function BlockAuto({ el, t }) {
 
 	return (
 		<Link className={css.linkToCat} to='/category'>
-			<div className={css.blockAutoWrap}>
-				<div className={css.blockAutoWrapText}>
+			{windowDimensions && (
+				<div className={css.blockAutoWrap}>
+					<div className={css.blockAutoWrapText}>
+						<div className={css.categoryName}>{claasAutoM}</div>
+						<div className={css.categoryPrice}>
+							{t('description.part1.secondBlock.vid')}&nbsp;{fullPrice}
+							{t('description.part1.secondBlock.uah')}
+						</div>
+					</div>
+					<div className={css.blockAutoWrapPic}>
+						<img
+							src={el.img}
+							className={css.categoryBlockImg}
+							alt={`Оренда авто ${el.class} у Львів`}
+						/>
+					</div>
+				</div>
+			)}
+			{!windowDimensions && (
+				<div className={css.wrapMobileSec}>
 					<div className={css.categoryName}>{claasAutoM}</div>
+					<img
+						src={el.img}
+						className={css.categoryBlockImgMobile}
+						alt={`Оренда авто ${el.class} у Львів`}
+					/>
 					<div className={css.categoryPrice}>
 						{t('description.part1.secondBlock.vid')}&nbsp;{fullPrice}
 						{t('description.part1.secondBlock.uah')}
 					</div>
 				</div>
-				<div className={css.blockAutoWrapPic}>
-					<img
-						src={el.img}
-						className={css.categoryBlockImg}
-						alt={`Оренда авто ${el.class} у Львів`}
-					/>
-				</div>
-			</div>
+			)}
 		</Link>
 	);
 }
