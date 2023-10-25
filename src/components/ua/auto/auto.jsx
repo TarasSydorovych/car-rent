@@ -11,7 +11,7 @@ import { PhotoProvider, PhotoSlider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import keyWord from '../../../function/keyWord';
 import { useTranslation, Trans } from 'react-i18next';
-const Auto = ({ data, val }) => {
+const Auto = ({ data, val, selectedCurrency, setSelectedCurrency }) => {
 	const { t, i18n } = useTranslation();
 	const [oneProd, setOneProd] = useState();
 	const [haveProd, setHaveProd] = useState(false);
@@ -26,7 +26,8 @@ const Auto = ({ data, val }) => {
 		let isMounted = true;
 		for (let i = 0; i < data.length; i++) {
 			if (data[i].uid === params.id) {
-				const cur = parseFloat(val[0].val);
+				const cur = parseFloat(val);
+
 				setOneProd(data[i]);
 				const numberOne = parseFloat(data[i].firstPrice) * cur;
 				const numberTwo = parseFloat(data[i].secondPrice) * cur;
@@ -46,7 +47,7 @@ const Auto = ({ data, val }) => {
 				setHaveProd(true);
 			}
 		}
-	}, [data]);
+	}, [data, val, selectedCurrency]);
 	const openMessage = () => {
 		setSendMessage(true);
 	};
@@ -63,7 +64,10 @@ const Auto = ({ data, val }) => {
 
 	return (
 		<>
-			<HeaderAll />
+			<HeaderAll
+				setSelectedCurrency={setSelectedCurrency}
+				selectedCurrency={selectedCurrency}
+			/>
 
 			{haveProd && (
 				<div className={css.fullProductWrap}>
@@ -112,7 +116,7 @@ const Auto = ({ data, val }) => {
 								</h1>
 								<p className={css.rentZa}>
 									{t('description.part1.auto.rentPay')}&nbsp; {rentPay}
-									{t('description.part1.auto.curency')}
+									{selectedCurrency}
 								</p>
 								<p className={css.rentManual}>
 									{t('description.part1.auto.typManual')}&nbsp; {oneProd.manual}
@@ -121,7 +125,7 @@ const Auto = ({ data, val }) => {
 									<div className={css.smallWrapPrice}>
 										<p className={css.price}>
 											{firstPrice}
-											{t('description.part1.auto.curency')}
+											{selectedCurrency}
 										</p>
 										<p className={css.data}>
 											1-2{t('description.part1.auto.doba')}
@@ -130,7 +134,7 @@ const Auto = ({ data, val }) => {
 									<div className={css.smallWrapPriceSec}>
 										<p className={css.price}>
 											{secondPrice}
-											{t('description.part1.auto.curency')}
+											{selectedCurrency}
 										</p>
 										<p className={css.data}>
 											3-7{t('description.part1.auto.dib')}
@@ -139,7 +143,7 @@ const Auto = ({ data, val }) => {
 									<div className={css.smallWrapPrice}>
 										<p className={css.price}>
 											{threePrice}
-											{t('description.part1.auto.curency')}
+											{selectedCurrency}
 										</p>
 										<p className={css.data}>
 											8+{t('description.part1.auto.dib')}
@@ -148,7 +152,7 @@ const Auto = ({ data, val }) => {
 									<div className={css.smallWrapPriceSec}>
 										<p className={css.price}>
 											{fourPrice}
-											{t('description.part1.auto.curency')}
+											{selectedCurrency}
 										</p>
 										<p className={css.data}>
 											30+{t('description.part1.auto.dib')}
@@ -165,7 +169,16 @@ const Auto = ({ data, val }) => {
 			)}
 			{sendMessage && <SendOrder setSendMessage={setSendMessage} />}
 			{val.length > 0 && (
-				<>{haveProd && <Questions oneProd={oneProd} t={t} val={val} />}</>
+				<>
+					{haveProd && (
+						<Questions
+							selectedCurrency={selectedCurrency}
+							oneProd={oneProd}
+							t={t}
+							val={val}
+						/>
+					)}
+				</>
 			)}
 			{val.length > 0 && (
 				<>{haveProd && <Description oneProd={oneProd} t={t} val={val} />}</>

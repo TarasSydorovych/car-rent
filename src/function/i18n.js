@@ -51,7 +51,7 @@ i18n
 							},
 							aboutBlock: {
 								abou: 'About Us',
-								desc: 'We at Car Rent Ukraine are a team of professionals in the car rental industry! Our managers will ensure your satisfaction with the level of services provided.',
+								desc: 'We at Rent Auto Ukraine are a team of professionals in the car rental industry! Our managers will ensure your satisfaction with the level of services provided.',
 								desOne: 'Premium Class Cars',
 								desTwo: 'Impeccable Condition of All Vehicles',
 								desThre: 'European-Level Service',
@@ -131,10 +131,10 @@ i18n
 									'As the market leader in car rental in Ukraine, we offer the highest standard of service and fleet reliability. We specialize in providing our customers with various automotive solutions for travel and business. Our fleet includes a wide range of vehicles, from comfortable passenger cars to stylish crossovers and luxury cars. We aim to provide our customers with high-quality transportation solutions, offering convenience and reliability at every stage of the rental process.',
 								opDeTitleOne: '10 Years in the Market',
 								opDeDescOne:
-									'Car Rent Ukraine - your reliable partner in car rental.',
+									'Rent Auto Ukraine - your reliable partner in car rental.',
 								opDeTitleTwo: '1000+ Satisfied Customers',
 								opDeDescTwo:
-									'Car Rent Ukraine - the best service at a reasonable price.',
+									'Rent Auto Ukraine - the best service at a reasonable price.',
 								opDeTitleThre: 'Excellent Performance',
 								opDeDescThre:
 									'With us, you will get a car that meets your expectations to the fullest.',
@@ -171,7 +171,7 @@ i18n
 								firstAnsvDescFirst:
 									'The price of renting a car in Lviv starts from',
 								firstAnsvDesceSecond:
-									'UAH per day, depending on the car you choose and the rental period. The longer the rental period, the lower the daily rental rate. Car rental rates from Car Rent Ukraine.',
+									'per day, depending on the car you choose and the rental period. The longer the rental period, the lower the daily rental rate. Car rental rates from Rent Auto Ukraine.',
 								secondAnsvTitileFirst: 'What deposit is required for rental',
 
 								secondAnsvDescFirst: 'The deposit for rental',
@@ -260,16 +260,16 @@ i18n
 							},
 							about: {
 								title:
-									'Car Rent Ukraine | Car Rental in Lviv - Your Reliable Partner',
+									'Rent Auto Ukraine | Car Rental in Lviv - Your Reliable Partner',
 								description:
 									'Learn more about us, the leading car rental company in Lviv. We offer high-quality service and a wide selection of cars for your journey.',
 							},
 							auto: {
 								titleFirst: 'Best Deal: Rent',
-								titleSecond: 'in Lviv Car Rent Ukraine',
+								titleSecond: 'in Lviv Rent Auto Ukraine',
 								descriptionFirst: 'Rent a',
 								descriptionSecond:
-									'in Lviv from Car Rent Ukraine at an affordable price. Book a',
+									'in Lviv from Rent Auto Ukraine at an affordable price. Book a',
 								descriptionThre: 'right now and get the best offer.',
 							},
 						},
@@ -315,7 +315,7 @@ i18n
 							},
 							aboutBlock: {
 								abou: 'Про нас',
-								desc: 'Ми в Car Rent Ukraine - команда професіоналів в сфері оренди автомобілів! Наші менеджери гарантовано залишать Вас задоволеними рівнем наданих послуг.',
+								desc: 'Ми в Rent Auto Ukraine - команда професіоналів в сфері оренди автомобілів! Наші менеджери гарантовано залишать Вас задоволеними рівнем наданих послуг.',
 								desOne: 'Автомобілі преміум класу',
 								desTwo: 'Бездоганний стан всіх автомобілів',
 								desThre: 'Сервіс європейського рівня',
@@ -395,10 +395,10 @@ i18n
 									'Компанія лідер на ринку прокату автомобілів в Україні, ми пропонуємо найвищий стандарт обслуговування та надійність автопарку. Ми спеціалізуємося на забезпеченні наших клієнтів різноманітними автомобільними рішеннями для подорожей та бізнесу. Наш автопарк включає в себе широкий вибір автомобілів різних класів, від комфортних легкових авто до стильних кросоверів і розкішних машин. Ми прагнемо забезпечити наших клієнтів високоякісними транспортними рішеннями, надаючи зручність та надійність на кожному етапі оренди.',
 								opDeTitleOne: '10 років на ринку',
 								opDeDescOne:
-									'Car Rent Ukraine - ваш надійний партнер у прокаті авто.',
+									'Rent Auto Ukraine - ваш надійний партнер у прокаті авто.',
 								opDeTitleTwo: '1000+ Задоволених клієнтів',
 								opDeDescTwo:
-									'Car Rent Ukraine - найкращий сервіс за помірну ціну',
+									'Rent Auto Ukraine - найкращий сервіс за помірну ціну',
 								opDeTitleThre: 'Чудова продуктивність',
 								opDeDescThre:
 									'З нами Ви отримаєте авто яке максимально підійде Вашим очікуванням',
@@ -433,7 +433,7 @@ i18n
 								firstAnsvDescFirst:
 									'Ціна на прокат автомобіля у Львові стартує від',
 								firstAnsvDesceSecond:
-									'UAH на добу, все залежить від обраного Вами автомобіля та періоду прокату. Чим більший термін оренди, тим нижча вартість прокату на добу. Вартість оренди автомобілів від компанії Car Rent Ukraine.',
+									'на добу, все залежить від обраного Вами автомобіля та періоду прокату. Чим більший термін оренди, тим нижча вартість прокату на добу. Вартість оренди автомобілів від компанії Rent Auto Ukraine.',
 								secondAnsvTitileFirst: 'Яка застава необхідна для оренди',
 
 								secondAnsvDescFirst: 'Застава для оренди',
@@ -474,7 +474,7 @@ i18n
 								five: ' Можемо вас заверити, що ви не будете хвилюватися про витрату пального. Цей автомобіль дуже економічний. Для тих, хто цінує швидкість, оренда ',
 								six: ' гарантує відчуття безпеки навіть при максимальнійшвидкості. ',
 								seven: 'Обираючи оренду ',
-								eight: ' на carrentukraine.com, ви отримуєте низку переваг:',
+								eight: ' на rentautoukraine.com, ви отримуєте низку переваг:',
 								listFirst: 'Повне страхування автомобіля;',
 								listSecond: 'Онлайн-підтримка 24/7;',
 								listThre: 'Автомобіль з повним баком бензину;',
@@ -511,16 +511,16 @@ i18n
 							},
 							about: {
 								title:
-									'Car Rent Ukraine | Оренда Авто у Львові - Ваш надійний партнер',
+									'Rent Auto Ukraine | Оренда Авто у Львові - Ваш надійний партнер',
 								description:
 									'Дізнайтеся більше про нас, провідну компанію з оренди авто в Львові. Ми пропонуємо високоякісний сервіс та широкий вибір автомобілів для вашої подорожі.',
 							},
 							auto: {
 								titleFirst: 'Найкраща пропозиція: оренда',
-								titleSecond: 'у Львові Car Rent Ukraine',
+								titleSecond: 'у Львові Rent Auto Ukraine',
 								descriptionFirst: 'Орендуйте',
 								descriptionSecond:
-									'в Львові від Car Rent Ukraine за доступною ціною. Забронюйте',
+									'в Львові від Rent Auto Ukraine за доступною ціною. Забронюйте',
 								descriptionThre:
 									'прямо зараз та отримайте найкращу пропозицію.',
 							},

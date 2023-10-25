@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import css from './auto.module.css';
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
-export default function Questions({ oneProd, t, val }) {
+export default function Questions({ oneProd, t, val, selectedCurrency }) {
 	const [queOne, setqueOne] = useState(false);
 
 	const openFistBlock = () => {
 		setqueOne(!queOne);
 	};
-	const cur = parseFloat(val[0].val);
+	const cur = parseFloat(val);
 	const questions = [
 		{
 			title: `${t('description.part1.auto.firstAnsvTitileFirst')} ${
@@ -15,7 +15,9 @@ export default function Questions({ oneProd, t, val }) {
 			} ${t('description.part1.auto.secondTitle')}?`,
 			answer: `${t('description.part1.auto.firstAnsvDescFirst')} ${
 				oneProd.fourPrice * cur
-			} ${t('description.part1.auto.firstAnsvDesceSecond')}`,
+			} ${selectedCurrency} ${t(
+				'description.part1.auto.firstAnsvDesceSecond',
+			)}`,
 		},
 		{
 			title: `${t('description.part1.que.titleq')}`,
@@ -29,7 +31,7 @@ export default function Questions({ oneProd, t, val }) {
 				oneProd.autoName
 			} ${t('description.part1.auto.secondAnsvDesceSecond')} ${
 				oneProd.rentPay * cur
-			} UAH. `,
+			} ${selectedCurrency}. `,
 		},
 		{
 			title: `${t('description.part1.que.titlew')}`,

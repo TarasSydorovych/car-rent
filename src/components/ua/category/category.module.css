@@ -80,7 +80,7 @@
 }
 .prodWrap {
 	width: 341px;
-	height: 511px;
+	height: 561px;
 	margin-left: 10px;
 	margin-right: 10px;
 	display: flex;
@@ -125,7 +125,14 @@
 	font-family: var(--custom-font);
 	font-weight: bolder;
 	font-size: 15px;
-	width: 60px;
+	width: auto;
+	width: 70px;
+}
+.listPSecondRen {
+	font-family: var(--custom-font);
+	font-weight: bolder;
+	font-size: 15px;
+	width: auto;
 }
 .priceListLiBack {
 	width: 100%;

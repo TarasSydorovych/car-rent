@@ -6,7 +6,7 @@ import ConnectForm from './connectForm';
 import css from './contact.module.css';
 import ContactLabel from './contactLabel';
 import MapAdnInfo from './mapAdnInfo';
-export default function Contact() {
+export default function Contact({ selectedCurrency, setSelectedCurrency }) {
 	const { t, i18n } = useTranslation();
 	keyWord(
 		`${t('description.seo.contact.title')}`,
@@ -14,7 +14,10 @@ export default function Contact() {
 	);
 	return (
 		<>
-			<HeaderAll />
+			<HeaderAll
+				setSelectedCurrency={setSelectedCurrency}
+				selectedCurrency={selectedCurrency}
+			/>
 			<ContactLabel t={t} />
 			<ConnectForm t={t} />
 			<MapAdnInfo t={t} />

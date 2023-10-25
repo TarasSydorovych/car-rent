@@ -2,7 +2,7 @@ import withFirebaseCollection from '../../../HOK/withFirebaseCollection';
 import BlockAuto from './blockAuto';
 import css from './secondBlock.module.css';
 
-const SecondBlock = ({ data, t, windowDimensions }) => {
+const SecondBlock = ({ data, t, windowDimensions, val, selectedCurrency }) => {
 	return (
 		<section id='catalogAuto' className={css.secondBlockWrap}>
 			<div className={css.secondBlockWrapDiv}>
@@ -19,6 +19,8 @@ const SecondBlock = ({ data, t, windowDimensions }) => {
 								el={el}
 								t={t}
 								windowDimensions={windowDimensions}
+								val={val}
+								selectedCurrency={selectedCurrency}
 							/>
 						);
 					})}

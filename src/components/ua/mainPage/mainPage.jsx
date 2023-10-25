@@ -7,7 +7,12 @@ import { useLocation } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
 import { useEffect } from 'react';
 import LazySecondBlock from './secondBlock/lazySecondBlock';
-export default function MainPage({ windowDimensions }) {
+export default function MainPage({
+	windowDimensions,
+	selectedCurrency,
+	setSelectedCurrency,
+	val,
+}) {
 	const location = useLocation();
 	const { t, i18n } = useTranslation();
 	useEffect(() => {
@@ -42,9 +47,19 @@ export default function MainPage({ windowDimensions }) {
 
 	return (
 		<>
-			<FirstBlock windowDimensions={windowDimensions} t={t} />
+			<FirstBlock
+				setSelectedCurrency={setSelectedCurrency}
+				selectedCurrency={selectedCurrency}
+				windowDimensions={windowDimensions}
+				t={t}
+			/>
 
-			<LazySecondBlock t={t} windowDimensions={windowDimensions} />
+			<LazySecondBlock
+				t={t}
+				windowDimensions={windowDimensions}
+				val={val}
+				selectedCurrency={selectedCurrency}
+			/>
 			<SendForm t={t} />
 			<AboutUs t={t} />
 			<Footer t={t} />

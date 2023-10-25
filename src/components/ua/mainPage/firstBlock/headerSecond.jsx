@@ -4,7 +4,38 @@ import { Link } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineClose } from 'react-icons/ai';
-export default function HeaderSecond({ windowDimensions }) {
+export default function HeaderSecond({
+	windowDimensions,
+	setSelectedCurrency,
+	selectedCurrency,
+}) {
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+	const currencies = ['UAH', 'EUR', 'USD'];
+	const [curVal, setCurVal] = useState('');
+	useEffect(() => {
+		if (selectedCurrency === 'грн') {
+			setCurVal('UAH');
+		} else if (selectedCurrency === 'eur') {
+			setCurVal('EUR');
+		} else if (selectedCurrency === 'usd') {
+			setCurVal('USD');
+		}
+	});
+	const handleCurrencyChange = (currency) => {
+		if (currency === 'UAH') {
+			setSelectedCurrency('грн');
+			setCurVal('UAH');
+		} else if (currency === 'EUR') {
+			setSelectedCurrency('eur');
+			setCurVal('EUR');
+		} else if (currency === 'USD') {
+			setCurVal('USD');
+			setSelectedCurrency('usd');
+		}
+		setIsDropdownOpen(false);
+	};
+
 	const { t, i18n } = useTranslation();
 	const [headerSticky, setHeaderSticky] = useState(false);
 	const [burgerCLick, setBurgerCLick] = useState(false);
@@ -75,6 +106,27 @@ export default function HeaderSecond({ windowDimensions }) {
 								EN
 							</p>
 						</div>
+						<div className={css.dropdown}>
+							<button
+								className={css.curencyButton}
+								onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+							>
+								{curVal}
+							</button>
+							{isDropdownOpen && (
+								<ul className={css.dropdownMenu}>
+									{currencies.map((currency) => (
+										<li
+											className={css.curentCurence}
+											key={currency}
+											onClick={() => handleCurrencyChange(currency)}
+										>
+											{currency}
+										</li>
+									))}
+								</ul>
+							)}
+						</div>
 						<Link className={css.logo} to='/'>
 							<h2 className={css.logo}>
 								Rent<span className={css.logoSpan}>Auto</span>Ukraine
@@ -94,6 +146,27 @@ export default function HeaderSecond({ windowDimensions }) {
 						onClick={openBurgerMenu}
 						className={css.rxHamburgerMenu}
 					/>
+					<div className={css.dropdown}>
+						<button
+							className={css.curencyButton}
+							onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+						>
+							{curVal}
+						</button>
+						{isDropdownOpen && (
+							<ul className={css.dropdownMenu}>
+								{currencies.map((currency) => (
+									<li
+										className={css.curentCurence}
+										key={currency}
+										onClick={() => handleCurrencyChange(currency)}
+									>
+										{currency}
+									</li>
+								))}
+							</ul>
+						)}
+					</div>
 					<div className={css.lanWrapWithNum}>
 						<div className={css.languageWrapP}>
 							<p onClick={cahangeUkr} className={css.languageP}>

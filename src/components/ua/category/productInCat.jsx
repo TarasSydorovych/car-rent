@@ -2,12 +2,19 @@ import css from './category.module.css';
 import foto from '../../../img/toyota.jpeg';
 import { useEffect, useState } from 'react';
 import { useParams, useLocation, Link } from 'react-router-dom';
-export default function ProductInCat({ el, setSendMessage, t, val }) {
+export default function ProductInCat({
+	el,
+	setSendMessage,
+	t,
+	cur,
+	selectedCurrency,
+}) {
 	const location = useLocation();
 	const [firstPrice, setFirstPrice] = useState();
 	const [secondPrice, setSecondPrice] = useState();
 	const [threePrice, setThreePrice] = useState();
 	const [fourPrice, setFourPrice] = useState();
+	const [rentPay, setRentPay] = useState();
 	const [corobka, setCorobka] = useState('');
 	const openFrom = () => {
 		setSendMessage(true);
@@ -15,40 +22,24 @@ export default function ProductInCat({ el, setSendMessage, t, val }) {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [location]);
-	// useEffect(() => {
-	// 	console.log('el.fourPrice', el.fourPrice, el.autoName);
-	// 	const numberOne = parseFloat(el.firstPrice) * 40;
-	// 	const numberTwo = parseFloat(el.secondPrice) * 40;
-	// 	const numberThree = parseFloat(el.threePrice) * 40;
-	// 	const numberFour = parseFloat(el.fourPrice) * 40;
-	// 	console.log('numberFour', numberFour);
-	// 	const roundedNumberOne = Math.round(numberOne);
-	// 	const roundedNumberTwo = Math.round(numberTwo);
-	// 	const roundedNumberThree = Math.round(numberThree);
-	// 	const roundedNumberFour = Math.round(numberFour);
-	// 	setFirstPrice(roundedNumberOne);
-	// 	setSecondPrice(roundedNumberTwo);
-	// 	setThreePrice(roundedNumberThree);
-	// 	setFourPrice(roundedNumberFour);
-	// }, []);
-	useEffect(() => {
-		const cur = parseFloat(val[0].val);
 
+	useEffect(() => {
 		const numberOne = parseFloat(el.firstPrice);
 		const numberTwo = parseFloat(el.secondPrice);
 		const numberThree = parseFloat(el.threePrice);
 		const numberFour = parseFloat(el.fourPrice);
-
+		const numberRent = parseFloat(el.rentPay) * cur;
 		const roundedNumberOne = Math.round(numberOne * cur);
 		const roundedNumberTwo = Math.round(numberTwo * cur);
 		const roundedNumberThree = Math.round(numberThree * cur);
 		const roundedNumberFour = Math.round(numberFour * cur);
-
+		const roundedNumberRent = Math.round(numberRent);
 		setFirstPrice(roundedNumberOne);
 		setSecondPrice(roundedNumberTwo);
 		setThreePrice(roundedNumberThree);
 		setFourPrice(roundedNumberFour);
-	}, [el]);
+		setRentPay(roundedNumberRent);
+	}, [el, selectedCurrency, cur]);
 	useEffect(() => {
 		if (el.manual === 'Автомат') {
 			setCorobka(`${t('description.part1.category.automat')}`);
@@ -66,28 +57,19 @@ export default function ProductInCat({ el, setSendMessage, t, val }) {
 				<img src={el.imageList[0]} className={css.prodPic} />
 			</Link>
 			<ul className={css.priceList}>
-				<li className={css.priceListLi}>
-					<p className={css.listP}>
-						{firstPrice}
-						{t('description.part1.category.uah')}
-					</p>
-					<p className={css.listPSecond}>
-						1-2{t('description.part1.category.doba')}
-					</p>
-				</li>
 				<li className={css.priceListLiBack}>
 					<p className={css.listP}>
-						{secondPrice}
-						{t('description.part1.category.uah')}
+						{fourPrice}
+						{selectedCurrency}
 					</p>
 					<p className={css.listPSecond}>
-						3-7{t('description.part1.category.dib')}
+						30+{t('description.part1.category.dib')}
 					</p>
 				</li>
 				<li className={css.priceListLi}>
 					<p className={css.listP}>
 						{threePrice}
-						{t('description.part1.category.uah')}
+						{selectedCurrency}
 					</p>
 					<p className={css.listPSecond}>
 						8+{t('description.part1.category.dib')}
@@ -95,11 +77,29 @@ export default function ProductInCat({ el, setSendMessage, t, val }) {
 				</li>
 				<li className={css.priceListLiBack}>
 					<p className={css.listP}>
-						{fourPrice}
-						{t('description.part1.category.uah')}
+						{secondPrice}
+						{selectedCurrency}
 					</p>
 					<p className={css.listPSecond}>
-						30+{t('description.part1.category.dib')}
+						3-7{t('description.part1.category.dib')}
+					</p>
+				</li>
+				<li className={css.priceListLi}>
+					<p className={css.listP}>
+						{firstPrice}
+						{selectedCurrency}
+					</p>
+					<p className={css.listPSecond}>
+						1-2{t('description.part1.category.doba')}
+					</p>
+				</li>
+				<li className={css.priceListLiBack}>
+					<p className={css.listP}>
+						{rentPay}
+						{selectedCurrency}
+					</p>
+					<p className={css.listPSecondRen}>
+						{t('description.part1.auto.rentPay')}
 					</p>
 				</li>
 			</ul>

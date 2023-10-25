@@ -7,7 +7,7 @@ import ContactLabel from './contactLabel';
 import HowRent from './howRent';
 import { useTranslation, Trans } from 'react-i18next';
 import css from './services.module.css';
-export default function Services() {
+export default function Services({ selectedCurrency, setSelectedCurrency }) {
 	const { t, i18n } = useTranslation();
 	keyWord(
 		`${t('description.seo.services.title')}`,
@@ -15,7 +15,10 @@ export default function Services() {
 	);
 	return (
 		<section>
-			<HeaderAll />
+			<HeaderAll
+				setSelectedCurrency={setSelectedCurrency}
+				selectedCurrency={selectedCurrency}
+			/>
 			<ContactLabel t={t} />
 			<BlockDesc t={t} />
 			<Advantages t={t} />

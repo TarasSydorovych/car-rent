@@ -13,7 +13,7 @@ import { auth, googleAuthProvider } from '../../../function/firebase';
 import AdmUkr from './admUkr';
 import ProductList from './photoEditor';
 import DataEditor from './dataEditor';
-export default function Cabinet() {
+export default function Cabinet({ selectedCurrency, setSelectedCurrency }) {
 	const navigate = useNavigate();
 	const [adminIn, setAdminIn] = useState(false);
 	const [addAuto, setAddAuto] = useState(false);
@@ -107,7 +107,10 @@ export default function Cabinet() {
 
 	return (
 		<>
-			<HeaderAll />
+			<HeaderAll
+				setSelectedCurrency={setSelectedCurrency}
+				selectedCurrency={selectedCurrency}
+			/>
 			<div className={css.wrapButtonIn}>
 				<button className={css.buttonLog} onClick={signInWithGoogle}>
 					Авторизуйтесь

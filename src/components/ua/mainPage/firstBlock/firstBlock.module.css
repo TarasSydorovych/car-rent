@@ -227,7 +227,7 @@
 	position: relative;
 	width: 300px;
 	height: 50px;
-
+	border-radius: 5px;
 	border: 0;
 	color: white;
 	font-size: 25px;
@@ -289,8 +289,78 @@
 	height: auto;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+}
+.dropdown {
+	width: auto;
+	height: auto;
+	position: relative;
+}
+.curencyButton {
+	font-family: var(--custom-font);
+	border: none;
+	background: none;
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.dropdownMenu {
+	position: absolute;
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0;
+	list-style-type: none;
+	background: #1a2129;
+	padding: 8px;
+}
+.curentCurence {
+	font-family: var(--custom-font);
+	font-size: 20px;
+	font-weight: bolder;
+	color: white;
+	margin-top: 8px;
+}
+.logoWr {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: auto;
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #e3f143;
+	border-radius: 50%;
+	text-decoration: none;
+}
+.logoTest {
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bolder;
+	color: blue;
+	font-size: 15px;
+	font-weight: bolder;
+	text-decoration: none;
 }
 @media only screen and (max-width: 600px) and (min-width: 300px) {
+	.curencyButton {
+		font-size: 15px;
+	}
+	.headerFirstPLinkIn {
+		color: white;
+		font-size: 10px;
+		text-decoration: none;
+		margin-left: 0;
+	}
+	.languageWrapP {
+		width: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 	.locationWrap {
 		display: flex;
 		align-items: center;
@@ -445,20 +515,21 @@
 		align-items: center;
 		text-decoration: none;
 		flex-shrink: 0;
+
 		background: var(--standart-color);
 	}
 
 	.logo {
 		font-family: 'Permanent Marker', cursive;
 		color: white;
-		font-size: 20px;
+		font-size: 15px;
 		font-weight: bolder;
 		text-decoration: none;
 	}
 	.logoSpan {
 		font-family: 'Permanent Marker', cursive;
 		color: var(--standart-color);
-		font-size: 20px;
+		font-size: 15px;
 		font-weight: bolder;
 	}
 	.languageP {
@@ -474,7 +545,7 @@
 	}
 	.rxHamburgerMenu {
 		color: white;
-		font-size: 30px;
+		font-size: 20px;
 		cursor: pointer;
 	}
 	.sticky {
@@ -494,6 +565,12 @@
 	}
 }
 @media only screen and (max-width: 700px) and (min-width: 479px) {
+	.languageWrapP {
+		width: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 	.locationWrap {
 		display: flex;
 		align-items: center;
@@ -733,6 +810,12 @@
 	}
 }
 @media only screen and (max-width: 1024px) and (min-width: 701px) {
+	.languageWrapP {
+		width: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 	.locationWrap {
 		display: flex;
 		align-items: center;

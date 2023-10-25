@@ -6,7 +6,7 @@ import BlockShortAb from './blockShortAb';
 import ListOfQuolytu from './listOfQuolytu';
 import keyWord from '../../../function/keyWord';
 import { useTranslation, Trans } from 'react-i18next';
-export default function AboutUs() {
+export default function AboutUs({ selectedCurrency, setSelectedCurrency }) {
 	const { t, i18n } = useTranslation();
 	keyWord(
 		`${t('description.seo.about.title')}`,
@@ -14,7 +14,10 @@ export default function AboutUs() {
 	);
 	return (
 		<section>
-			<HeaderAll />
+			<HeaderAll
+				setSelectedCurrency={setSelectedCurrency}
+				selectedCurrency={selectedCurrency}
+			/>
 			<AboutLabel t={t} />
 			<BlockShortAb t={t} />
 			<ListOfQuolytu t={t} />

@@ -29,12 +29,13 @@
 	transition: all 0.9s;
 	padding-bottom: 15px;
 	animation: bounceAnimation 0.9s ease-in-out infinite;
+	z-index: 20;
 }
 .wrapX {
 	width: 56px;
 	height: 56px;
 	border-radius: 50%;
-	background: white;
+	background: var(--standart-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -47,26 +48,32 @@
 	align-self: flex-end;
 }
 .faViber {
-	color: white;
+	color: #7c52ef;
 	font-size: 40px;
 	cursor: pointer;
 }
 .faWhat {
-	color: white;
+	color: #0bd05e;
+	font-size: 40px;
+	cursor: pointer;
+}
+.telegram {
+	color: #1d9ed9;
 	font-size: 40px;
 	cursor: pointer;
 }
 .expanded {
-	top: calc(85% - 200px);
-	height: calc(250px - 10px);
+	top: calc(85% - 220px);
+	height: calc(270px - 10px);
 	padding-top: 10px;
 	border-radius: 20px;
-	border: 2px solid white;
+	border: 2px solid var(--standart-color);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	animation-play-state: paused;
+	background: white;
 }
 
 /* Стилі для іконок (перевірте значення top та left для правильного позиціонування) */
@@ -81,6 +88,6 @@
 	opacity: 0;
 }
 .aiOutlineClose {
-	color: black;
+	color: white;
 	font-size: 30px;
 }

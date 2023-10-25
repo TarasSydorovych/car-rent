@@ -12,26 +12,13 @@ const ProductList = ({
 	setSelectedOption,
 	setCategory,
 	setPidCategory,
+	selectedCurrency,
 	val,
 }) => {
 	const [filteredData, setFilteredData] = useState([]);
-	const cur = parseFloat(val[0].val);
+	const cur = parseFloat(val);
+
 	useEffect(() => {
-		// Функція для фільтрації товарів на основі умов
-		// const filterProducts = () => {
-		// 	if (category !== '' && pidCategory === '') {
-		// 		// Фільтруємо за умовою, коли category не порожній, а pidCategory порожній
-		// 		const filtered = data.filter((el) => el.classAuto === category);
-		// 		setFilteredData(filtered);
-		// 	} else if (pidCategory !== '' && category === '') {
-		// 		// Фільтруємо за умовою, коли pidCategory не порожній, а category порожній
-		// 		const filtered = data.filter((el) => el.pidClassAuto === pidCategory);
-		// 		setFilteredData(filtered);
-		// 	} else {
-		// 		// Якщо обидва параметри мають значення, то відображаємо усі товари
-		// 		setFilteredData(data);
-		// 	}
-		// };
 		const filterProducts = () => {
 			let filtered = data;
 
@@ -83,14 +70,16 @@ const ProductList = ({
 					{t('description.part1.category.option')}
 				</option>
 				<option className='customOpin' value={40} key={2}>
-					{t('description.part1.category.to')}&nbsp;{40 * cur}
-					{t('description.part1.category.uah')}
+					{t('description.part1.category.to')}&nbsp;{Math.round(40 * cur)}
+					{selectedCurrency}
 				</option>
 				<option className='customOpin' value={80} key={3}>
-					{40 * cur}-{80 * cur} {t('description.part1.category.uah')}
+					{Math.round(40 * cur)}-{Math.round(80 * cur)}
+					{selectedCurrency}
 				</option>
 				<option className='customOpin' value={120} key={4}>
-					{80 * cur}-{120 * cur} {t('description.part1.category.uah')}
+					{Math.round(80 * cur)}-{Math.round(120 * cur)}
+					{selectedCurrency}
 				</option>
 			</select>
 			<div className={css.prodListWrap}>
@@ -101,7 +90,8 @@ const ProductList = ({
 							key={index}
 							el={el}
 							t={t}
-							val={val}
+							cur={cur}
+							selectedCurrency={selectedCurrency}
 						/>
 					);
 				})}

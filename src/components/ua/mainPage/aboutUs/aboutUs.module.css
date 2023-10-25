@@ -118,6 +118,9 @@
 		align-items: flex-start;
 		margin-left: 5px;
 	}
+	.buttonDetail {
+		align-self: center;
+	}
 	.styleP {
 		font-family: 'Work Sans', Arial, Tahoma;
 		color: black;

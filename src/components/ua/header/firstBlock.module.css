@@ -284,7 +284,57 @@
 	text-decoration: none;
 	margin-left: 0;
 }
+.dropdown {
+	width: auto;
+	height: auto;
+	position: relative;
+}
+.curencyButton {
+	font-family: var(--custom-font);
+	border: none;
+
+	background: none;
+	color: black;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.dropdownMenu {
+	position: absolute;
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0;
+	list-style-type: none;
+	background: #1a2129;
+	padding: 8px;
+}
+.curentCurence {
+	font-family: var(--custom-font);
+	font-size: 20px;
+	font-weight: bolder;
+	color: white;
+	margin-top: 8px;
+}
 @media only screen and (max-width: 600px) and (min-width: 300px) {
+	.curencyButton {
+		font-family: var(--custom-font);
+		border: none;
+		background: none;
+		color: black;
+		font-size: 15px;
+		font-weight: bolder;
+	}
+	.languageP {
+		font-size: 15px;
+	}
+	.headerFirstPLinkIn {
+		color: black;
+		font-size: 10px;
+		text-decoration: none;
+		margin-left: 0;
+	}
 	.locationWrap {
 		width: 100%;
 		display: flex;
@@ -310,14 +360,14 @@
 	.logo {
 		font-family: 'Permanent Marker', cursive;
 		color: black;
-		font-size: 25px;
+		font-size: 15px;
 		font-weight: bolder;
 		text-decoration: none;
 	}
 	.logoSpan {
 		font-family: 'Permanent Marker', cursive;
 		color: var(--standart-color);
-		font-size: 25px;
+		font-size: 15px;
 		font-weight: bolder;
 	}
 	.headerFirstWrap {

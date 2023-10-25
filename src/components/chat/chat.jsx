@@ -7,7 +7,7 @@ import {
 } from 'react-icons/ai';
 
 import { BsFillPhoneFill } from 'react-icons/bs';
-import { FaViber } from 'react-icons/fa';
+import { FaViber, FaTelegramPlane } from 'react-icons/fa';
 export default function Chat() {
 	const [expanded, setExpanded] = useState(false);
 
@@ -29,8 +29,11 @@ export default function Chat() {
 					<a href='https://wa.me/+380984549929'>
 						<AiOutlineWhatsApp className={css.faWhat} />
 					</a>
+					<a href='https://t.me/RentAutoUkraine'>
+						<FaTelegramPlane className={css.telegram} />
+					</a>
 					<a href='tel:+380984549929'>
-						<BsFillPhoneFill className={css.faWhat} />
+						<AiTwotonePhone className={css.faWhat} />
 					</a>
 					<div className={css.wrapX}>
 						<AiOutlineClose className={css.aiOutlineClose} />
