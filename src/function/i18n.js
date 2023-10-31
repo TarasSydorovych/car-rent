@@ -19,7 +19,7 @@ i18n
 							headerFirst: {
 								location: 'Our Location',
 								order: 'Order a car',
-								cool: 'Best Rental Deals and Top Cars',
+								cool: 'CHEAPEST RENTAL AND BEST CARS',
 								contact: 'Contact Us',
 								main: 'Home',
 								auto: 'Fleet',
@@ -283,7 +283,7 @@ i18n
 							headerFirst: {
 								location: 'Наша локація',
 								order: 'Замовити авто',
-								cool: 'НАЙДЕШЕВША ОРЕНДА ТА НАЙКРАЩІ МАШИНИ',
+								cool: 'Орендуй авто по найкращих цінах',
 								contact: 'КОНТАКТИ',
 								main: 'Головна',
 								auto: 'Автопарк',

@@ -35,20 +35,16 @@ export default function BlockAuto({
 	return (
 		<Link className={css.linkToCat} to={`/category/${lin}`}>
 			{windowDimensions && (
-				<div className={css.blockAutoWrap}>
-					<div className={css.blockAutoWrapText}>
-						<div className={css.categoryName}>{claasAutoM}</div>
-						<div className={css.categoryPrice}>
-							{t('description.part1.secondBlock.vid')}&nbsp;{fullPrice}
-							{selectedCurrency}
-						</div>
-					</div>
-					<div className={css.blockAutoWrapPic}>
-						<img
-							src={el.img}
-							className={css.categoryBlockImg}
-							alt={`Оренда авто ${el.class} у Львів`}
-						/>
+				<div className={css.wrapMobileSecAll}>
+					<div className={css.categoryName}>{claasAutoM}</div>
+					<img
+						src={el.img}
+						className={css.categoryBlockImgMobile}
+						alt={`Оренда авто ${el.class} у Львів`}
+					/>
+					<div className={css.categoryPrice}>
+						{t('description.part1.secondBlock.vid')}&nbsp;{fullPrice}
+						{selectedCurrency}
 					</div>
 				</div>
 			)}

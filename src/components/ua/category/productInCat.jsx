@@ -59,7 +59,7 @@ export default function ProductInCat({
 			<ul className={css.priceList}>
 				<li className={css.priceListLiBack}>
 					<p className={css.listP}>
-						{fourPrice}
+						{fourPrice}&nbsp;
 						{selectedCurrency}
 					</p>
 					<p className={css.listPSecond}>
@@ -68,7 +68,7 @@ export default function ProductInCat({
 				</li>
 				<li className={css.priceListLi}>
 					<p className={css.listP}>
-						{threePrice}
+						{threePrice}&nbsp;
 						{selectedCurrency}
 					</p>
 					<p className={css.listPSecond}>
@@ -77,7 +77,7 @@ export default function ProductInCat({
 				</li>
 				<li className={css.priceListLiBack}>
 					<p className={css.listP}>
-						{secondPrice}
+						{secondPrice}&nbsp;
 						{selectedCurrency}
 					</p>
 					<p className={css.listPSecond}>
@@ -86,7 +86,7 @@ export default function ProductInCat({
 				</li>
 				<li className={css.priceListLi}>
 					<p className={css.listP}>
-						{firstPrice}
+						{firstPrice}&nbsp;
 						{selectedCurrency}
 					</p>
 					<p className={css.listPSecond}>
@@ -95,7 +95,7 @@ export default function ProductInCat({
 				</li>
 				<li className={css.priceListLiBack}>
 					<p className={css.listP}>
-						{rentPay}
+						{rentPay}&nbsp;
 						{selectedCurrency}
 					</p>
 					<p className={css.listPSecondRen}>
