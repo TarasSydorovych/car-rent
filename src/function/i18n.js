@@ -21,6 +21,10 @@ i18n
 				translation: {
 					description: {
 						part1: {
+							mainPage: {
+								fourFo: 'Sorry, but this page does not exist.',
+								returnTo: 'Back to Home',
+							},
 							headerFirst: {
 								location: 'Our Location',
 								order: 'Order a car',
@@ -285,6 +289,10 @@ i18n
 				translation: {
 					description: {
 						part1: {
+							mainPage: {
+								fourFo: 'Вибачте, але такої сторінки не існує.',
+								returnTo: 'Повернутись на головну',
+							},
 							headerFirst: {
 								location: 'Наша локація',
 								order: 'Замовити авто',
