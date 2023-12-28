@@ -15,18 +15,7 @@ export default function MainPage({
 }) {
 	const location = useLocation();
 	const { t, i18n } = useTranslation();
-	useEffect(() => {
-		// Перевіряємо, чи містить поточний шлях "/en" або "/uk" і встановлюємо відповідну мову.
-		if (location.pathname.includes('/en')) {
-			i18n.changeLanguage('en');
-		} else if (location.pathname.includes('/ua')) {
-			i18n.changeLanguage('ua');
-		} else {
-			// Якщо шлях не містить "/en" або "/uk", залишаємо мову без змін.
-			// Ви можете встановити вашу мову за замовчуванням тут, наприклад, "en" або "uk".
-			// Наприклад: i18n.changeLanguage('en');
-		}
-	}, [location.pathname]);
+
 	document.title = `${t('description.seo.mainPage.title')}`; // Встановлюємо заголовок сторінки
 
 	const metaDescription = document.querySelector('meta[name="description"]');

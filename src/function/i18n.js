@@ -6,10 +6,15 @@ i18n
 	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
-		debug: true,
+		debug: false,
 		fallbackLng: 'ua',
+		whitelist: ['ua', 'en'],
 		interpolation: {
 			escapeValue: false,
+		},
+		detection: {
+			order: ['path', 'navigator'],
+			lookupFromPathIndex: 0, // Індекс мови в шляху (0 - перший шляховий сегмент)
 		},
 		resources: {
 			en: {

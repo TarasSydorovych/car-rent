@@ -11,6 +11,7 @@ import { PhotoProvider, PhotoSlider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import keyWord from '../../../function/keyWord';
 import { useTranslation, Trans } from 'react-i18next';
+import NotFound from '../../404/notFound';
 const Auto = ({ data, val, selectedCurrency, setSelectedCurrency }) => {
 	const { t, i18n } = useTranslation();
 	const [oneProd, setOneProd] = useState();
@@ -21,6 +22,7 @@ const Auto = ({ data, val, selectedCurrency, setSelectedCurrency }) => {
 	const [threePrice, setThreePrice] = useState();
 	const [fourPrice, setFourPrice] = useState();
 	const [rentPay, setRentPay] = useState();
+
 	let params = useParams();
 	useEffect(() => {
 		let isMounted = true;

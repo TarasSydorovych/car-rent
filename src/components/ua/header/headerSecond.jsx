@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useTranslation, Trans } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 export default function HeaderSecond({
 	windowDimensions,
 	selectedCurrency,
 	setSelectedCurrency,
 }) {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+	const navigate = useNavigate();
 	const currencies = ['UAH', 'EUR', 'USD'];
 	const [curVal, setCurVal] = useState('');
 	useEffect(() => {
@@ -21,7 +22,7 @@ export default function HeaderSecond({
 		} else if (selectedCurrency === 'usd') {
 			setCurVal('USD');
 		}
-	});
+	}, [selectedCurrency]);
 	const handleCurrencyChange = (currency) => {
 		if (currency === 'UAH') {
 			setSelectedCurrency('грн');
@@ -39,10 +40,14 @@ export default function HeaderSecond({
 	const { t, i18n } = useTranslation();
 	const [burgerCLick, setBurgerCLick] = useState(false);
 	const cahangeUkr = () => {
-		i18n.changeLanguage('ua');
+		i18n.changeLanguage('uk-UA');
+		navigate(`/ua`);
 	};
+
 	const cahangeEn = () => {
 		i18n.changeLanguage('en');
+
+		navigate(`/en`);
 	};
 	const handleScroll = () => {
 		if (window.scrollY >= 50) {

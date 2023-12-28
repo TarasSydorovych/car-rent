@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineClose } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 export default function HeaderSecond({
 	windowDimensions,
 	setSelectedCurrency,
 	selectedCurrency,
 }) {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+	const navigate = useNavigate();
 	const currencies = ['UAH', 'EUR', 'USD'];
 	const [curVal, setCurVal] = useState('');
 	useEffect(() => {
@@ -59,10 +60,14 @@ export default function HeaderSecond({
 		};
 	}, []);
 	const cahangeUkr = () => {
-		i18n.changeLanguage('ua');
+		i18n.changeLanguage('uk-UA');
+		navigate(`/ua`);
 	};
+
 	const cahangeEn = () => {
 		i18n.changeLanguage('en');
+
+		navigate(`/en`);
 	};
 	return (
 		<div
